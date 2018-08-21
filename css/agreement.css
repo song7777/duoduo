@@ -1,0 +1,24 @@
+.tbts{
+	margin-left: 0.5rem;
+	margin-top: 1.06rem;
+	height: 0.4rem;
+    color: #615d5c;
+}
+.tbts_1{
+	margin: 0.4rem 0.5rem;
+    color: #615d5c;
+    font-size: 0.36rem;
+    letter-spacing:0.04rem;
+    text-align: justify;
+    line-height: 0.56rem;
+}
+.tbts_2{
+	margin: 0.4rem 0.5rem;
+	margin-top: 0.26rem;
+    color: #615d5c;
+    font-size: 0.36rem;
+    letter-spacing:0.04rem;
+    text-align: justify;
+    line-height: 0.56rem;
+}
+

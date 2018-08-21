@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" href="css/mui.min.css" />
+    <script type="text/javascript" src="js/flexible.js" ></script>
+    <link rel="stylesheet" href="css/public_style.css" />
+    <link rel="stylesheet" href="css/gift_details.css" />
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <link rel="stylesheet" href="css/login.css" />
+	</head>
+	<body>
+		<div class="page">
+			<!--<header class="gd-header gd-header1">
+				<img class="gd_back" src="images/goback-b.png" />
+			</header>-->
+			<header class="head gd-header2">
+				<div class="head_top gd-header-bor">
+					<div class="top_1">
+						<a class="top_a1" onclick="javascript:history.go(-1);">
+							<img class="top_img1 gd_back" src="images/goback-b.png" />
+						</a>
+					</div>
+					<div class="top_2">
+						<ul class="gd-goods-meun gd-goods-meun2">
+							<li class="gd-goods-cutover gd-goods-active">商品</li>
+							<li class="gd-goods-cutover" >详情</li>
+							<li class="gd-goods-cutover" >评论</li>
+						</ul>
+					</div>
+					<div class="top_3"></div>
+				</div>
+			</header>
+			<section class="gd-goods" id="gd_goods">
+				<div class="swiper-container swiper-container1">
+			        <ul class="swiper-wrapper">
+					    <li class="swiper-slide" v-for="banner in banners">			
+							<img class="banner_img" :src="'http://ddpointmall.wiwipu.com'+banner.image_url"  />					
+					    </li>
+			        </ul>
+			        <div class="swiper-pagination"></div>
+			   </div>
+			   <div class="gd-goods-info">
+			   	    <p class="gd-goods-name f_color3">
+			   	    	{{goods_name}}
+			   	    </p>
+			   	    <div class="gd-goods-pc">
+			   	    	<span class="gd-goods-price f_color1">
+			   	    	    <img class="price-icon" src="images/gold.png" />
+			   	    	    {{shop_price}}
+			   	        </span>
+			   	        <div class="gd-goods-collection flex_center">
+			   	        	<div class=" flex_center">
+			   	        		<img class="collection-icon" src="images/Recommend.png" />
+			   	    	        <span class="collection-text f_color1">推荐</span>
+			   	        	</div>
+			   	    	    <div class=" flex_center" @click="collection" id="collection">
+			   	        		<img class="collection-icon" src="images/Collection-a.png" />
+			   	    	        <span class="collection-text f_color1">收藏</span>
+			   	        	</div>
+			   	        	<div class=" flex_center" @click="delcollection" id="delcollection">
+			   	        		<img class="collection-icon" src="images/Collection-b.png" />
+			   	    	        <span class="collection-text f_color1">收藏</span>
+			   	        	</div>
+			   	        </div>
+			   	    </div>
+			   </div>
+			   <div class="tanchuang" id="tan" v-html="tan"></div>
+			</section>
+			<section class="gd-goods-parameter gd_display" id="goodsParameter">
+				<div class="gd-goods-guige gd-goods-space">
+					<span class="parameter-name f_color2">商品规格：</span>
+				</div>
+				<div class="gd-goods-color gd-goods-space">
+					<span class="parameter-name f_color2">商品颜色：</span>
+					<div class="parameter-select">
+						<div class="pa-se-option pa-se-option1 flex_center f_color3" v-for="(option,index) in options" @click="testclick">
+							 {{goodsAttr[index].name}}
+						</div>
+					</div>
+				</div>
+				<div class="gd-goods-size gd-goods-space">
+					<span class="parameter-name f_color2">商品尺寸：</span>		
+					<div class="parameter-select">
+						<div class="pa-se-option pa-se-option2 flex_center f_color3" v-for="val in goodsAttr2" @click="sizeClick">
+							{{val.name}}
+						</div>
+					</div>
+				</div>
+				<div class="gd-goods-num gd-goods-space">
+					<span class="parameter-name f_color2">购买数量：</span>
+					<div class="parameter-select">
+						<input type="button" value="-"  class="gd-goods-less f_color2" @click="iLess"/>
+						<input type="number" class="gd-goods-number f_color1" v-model="buyNumber" readonly="readonly"/>
+						<input type="button" value="+"  class="gd-goods-add f_color2" @click="iAdd"/>
+					</div>
+				</div>
+				<div class="gd-goods-youhui backcolor3">
+					<div class="yh-space">
+						<div class="time-icon">
+							<img class="time-icon-img" src="images/clock-1.png" />
+						</div>
+						<div class="yh-price">
+							<p class="yh-price-name">限时优惠：</p>
+							<p class="yh-price-num flex_center">
+								<img class="yh-price-icon" src="images/gold.png" />
+								{{discount_price}}
+							</p>
+						</div>
+						<div class="yh-price-time">
+							<div class="remaining-time">
+								距离结束
+								<ul class="rt-brand">
+        					        <li class="rt-time">
+        						        {{hour}}
+        					        </li>
+        					        <li class="rt-blank">
+        						        :
+        					        </li>
+        					        <li class="rt-time">
+        						        {{minuter}}
+        					        </li>
+        					        <li class="rt-blank">
+        						        :
+        					        </li>
+        					        <li class="rt-time">
+        						        {{second}}
+        					        </li>
+        					    </ul>
+							    </div>
+							    <input type="button" class="snatch-btn f_color1" value="立即抢购" />
+						</div>
+					</div>
+				</div>
+				<div class="related-goods flex_center">
+					<p class="rg-text f_color3">相关商品</p>
+				</div>
+				<div class="swiper-container swiper-container2">
+
+				<ul class="gd-goods-related swiper-wrapper">
+					<li class="rg-goods swiper-slide" v-for="recommend in recommends">
+						<div class="rg-goods-n"  >
+								<img class="gd-goods-img" :src="'http://ddpointmall.wiwipu.com'+recommend.cover_img" />
+						<p class="rg-goods-name f_color3">{{recommend.goods_name}}</p>
+						<p class="rg-goods-price flex_center f_color1">
+							<img class="rg-gp-icon" src="images/gold.png"/>
+							{{recommend.shop_price}}
+						</p>					
+						</div>
+                        <a class="rg-space" v-on:click="goodsClick(event)" v-bind:data-goodsId ="recommend.goods_id" href="gift_details.html"></a>
+					</li>
+				</ul>
+				</div>
+			</section>
+			<section class="gd-goods-details gd_display" id="gd_details">
+				<div class="gd-goods-details-w" v-for="detail in details">
+					<img class="goods-de-img"  :src="'http://ddpointmall.wiwipu.com'+detail.img"/>
+				</div>
+			</section>
+			<div id="goodsComment" class="gd_display">
+				<div class="noComment flex_center"></div>
+				<section class="gd-goods-comment " v-for="comment in comments">
+				<div class="gd-goods-user">
+					<img class="gd-user-img" :src="'http://ddpointmall.wiwipu.com'+comment.face"/>
+					<div class="com-user">
+						<span class="gd-user-name">{{comment.nickname}}</span>
+						<time class="gd-com-time f_color2">{{comment.create_time | convTime}}</time>
+					</div>
+				</div>
+				<div class="com-content">
+					<p class="com-text ">{{comment.contents}}</p>
+					<div class="com-img-space">
+						<div v-for="img in comment.comment_pic">
+							<img :src="'http://ddpointmall.wiwipu.com/'+img" class="com-img"/>
+						</div>
+						<div class="clear_float"></div>
+					</div>
+				</div>
+				<div class="shangjia-huifu">
+					<div class="sjhf-space">
+					<p class="sj-name">商家回复</p>
+					<p class="sj-hf">{{comment.reply}}
+					</p>
+					</div>
+				</div>
+			</section>
+			</div>
+			<footer class="gd-goods-buy" id="goodsBuy">
+				<div class="buy-space">
+					<div class="gd-goods-tuijian flex_center">
+						<div class="add-border flex_center">
+						<img class="gdgb-icon" src="images/gd1.png" />
+						好礼推荐
+						</div>
+					</div>
+					<div class="gd-goods-se flex_center" onclick="location.href='selected_gift.html'">
+						<img class="gdgb-icon" src="images/gd2.png" />
+						已选礼品
+					</div>
+					<div class="gd-goods-addin flex_center" @click="addCart">
+						加入礼品车
+					</div>
+					<div class="gd-goods-exchange flex_center" @click="imCon">
+						立即兑换
+					</div>	
+				</div>
+				<div class="tanchuang" id="tan" v-html="tan"></div>
+			</footer>
+		</div>
+	</body>
+
+	<script src="js/token.js" ></script>
+	<script src="js/vue.min.js" ></script>
+	<script src="js/axios.min.js" ></script>
+	<script src="js/swiper-4.3.3.min.js" ></script>
+	<script src="js/details.js" ></script>
+	<script src="js/mui.min.js" ></script>
+	<script src="js/goods_comment.js" ></script>
+	<script src="js/gift_details.js" ></script>
+
+</html>

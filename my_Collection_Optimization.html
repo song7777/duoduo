@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我的收藏</title>
+		<link rel="stylesheet" href="css/public_style.css" />
+		<script type="text/javascript" src="js/flexible.js" ></script>
+		<link rel="stylesheet" href="css/my_Collection_Mind.css" />
+	</head>
+	<body>
+		<!--page包裹整个页面的div-->
+		<div class="page" id="myCollection2">
+			<!--头部公共样式开始-->
+			<header class="head">
+				<div class="head_top">
+					<!--top_1头部左边第一个图标 可以换img属性改变图标形状  注意：如果不用图像保留div只删除img-->
+					<div class="top_1"><a class="top_a1"><img class="top_img1" src="images/goback-a.png" onclick="javascript:history.go(-1);"/></a></div>
+					<!--top_2头部文字，替换文字即可！-->
+					<div class="top_2">我的收藏</div>
+					<!--top_3头部右边第一个图标 可以换img属性改变图标形状 有文字替换文字，没有文字的删除文字即可  注意：如果不用图像保留div只删除img-->
+					<div class="top_3"><a class="top_a2" href="personal_center.html"><img class="top_img2" src="images/registcenter.png" /></a></div>
+				</div>
+			</header>
+			<!--头部公共样式结束-->
+			<section class="trunk">
+				<div class="collection_nav">
+					<div class="collection_nav">
+						<a href="my_Collection_Mind.html" class="collection_a ">心仪礼品</a>
+					</div>
+					<div class="collection_nav">
+						<a href="my_Collection_Optimization.html" class="collection_a collection_a_red">优选商品</a>
+					</div>
+				</div>
+				<div v-for="(lists,index) in lists_length" class="mind_shop">
+					<img class="mind_img" :src="'http://ddpointmall.wiwipu.com'+myCollection2.lists[index].cover_img">
+					<div class="mind_zong">
+						<p class="mind_name">{{myCollection2.lists[index].goods_name}}</p>
+						<div class="mind_Price">
+							<img class="jinbi" src="images/gold-b.png">
+							<p class="Price_number">{{myCollection2.lists[index].shop_price}}</p>
+						</div>
+					</div>
+					<img class="del" src="images/delete.png">
+				</div>
+			</section>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/token.js" ></script>
+	<script type="text/javascript" src="js/vue.min.js" ></script>
+	<script type="text/javascript" src="js/axios.min.js" ></script>
+	<script type="text/javascript" src="js/my_Collection_Optimization.js" ></script>
+</html>

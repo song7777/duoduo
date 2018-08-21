@@ -1,0 +1,99 @@
+.xyhzc_box{
+	flex: 1;
+    padding: 1.68rem 1.85rem 0;
+}
+.shoujihao{
+	height: 1.69rem;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 0.133333rem;
+    position: relative;
+    border-bottom: 1px solid #969593;
+}
+.yanzhengma{
+	height: 1.69rem;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 0.133333rem;
+    position: relative;
+}
+.shezhimima{
+	height: 1.69rem;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 0.133333rem;
+    position: relative;
+    border-bottom: 1px solid #969593;
+}
+.querenmima{
+	height: 1.69rem;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 0.133333rem;
+    position: relative;
+    border-bottom: 1px solid #969593;
+}
+.box_img1{
+	text-indent: 1em;
+	height: 0.4rem;
+}
+.sjh{
+	text-indent: 1em;
+	border: none;
+	width: 100%;
+}
+.yzm{
+	width: 100%;
+	height: 1.61rem;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 0.133333rem;
+    position: relative;
+    border-bottom: 1px solid #969593;
+}
+.dxyz{
+	display: flex;
+    align-items: flex-end;
+	height: 0.81rem;
+	text-indent: 1em;
+}
+.duanxinyanzheng{
+	width: 1.62rem;
+	height: 0.81rem;
+	font-size: 0.33rem;
+	background-color: #e67817;
+	color: #FFFFFF;
+	border: 0;
+}
+.yhzcxy{
+	height: 0.46rem;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+	margin-top: 0.53rem;
+}
+.box_img2{
+	text-indent: 1em;
+	height: 0.46rem;
+}
+.yhxy{
+	text-indent: 1em;
+	line-height: 0.46rem;
+	color:#747371;
+}
+.register{
+	margin-top: 1.17rem;
+	width: 100%;
+	height: 1.14rem;
+    display: flex;
+    justify-content: center;
+}
+.lijizhuce{
+    width: 6.13rem;
+    height: 100%;
+    background: url(../images/botton-1.png) no-repeat;
+    background-size: 100% 100%;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 1.14rem;
+}

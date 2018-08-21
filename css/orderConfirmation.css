@@ -1,0 +1,118 @@
+.head{
+	border-bottom:0.08rem solid #dededc;
+}
+.address{
+	width: 100%;
+}
+.address_content{
+	width: 100%;
+	height: 3.066666rem;
+	padding: 0.24rem 0.453333rem 0.36rem 0.586666rem;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	font: 0.306666rem/0.8rem "微软雅黑";
+	border-top: 0.08rem solid #C0C0C0;
+	
+}
+.address_info{
+	height: 100%;
+	display: flex;
+	
+	
+}
+.info{
+	margin-left: 0.4rem;
+}
+.address_edit{
+	align-self: flex-end;
+	color: #1f89bd;
+}
+.address_btm{
+	width:100%;
+	height: 0.2rem;
+}
+.goods{
+	width: 100%;
+}
+.goods_content{
+	width: 100%;
+	border-bottom: 0.146666rem solid #dededc;
+
+	padding: 0.24rem 0.613333rem 0.16rem 0.56rem;
+	box-sizing: border-box;
+}
+.goods_list{
+	height: 3.053333rem;
+	display: flex;
+	justify-content: space-between;
+	
+}
+.goods_info{
+	display: flex;
+}
+.goods_img{
+	width: 2.093333rem;
+	height: 2.386666rem;
+	margin-right: 0.346666rem;
+}
+.goods_title{
+	font: 0.306666rem/0.466666rem "微软雅黑";
+	color: #5f5e5c;
+	margin-bottom: 0.906666rem;
+}
+.goods_type{
+	font:0.266666rem/0.266666rem "微软雅黑";
+	color: #7a7675;
+	margin-bottom: 0.4rem;
+}
+.goods_size{
+	margin-left: 0.373333rem;
+}
+.gold{
+	width: 0.36rem;
+	height: 0.346666rem;
+	margin-right: 0.106666rem;
+}
+.goods_return{
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.gonext{
+	width: 0.346666rem;
+	height: 0.426666rem;
+	margin: 0.96rem 0 0.666666rem 0;
+	align-self: flex-end;
+}
+.goods_price{
+	margin-right: 0.346666rem;
+}
+
+.count{
+	width: 100%;
+}
+.count_content{
+	width: 100%;
+	height: 2.733333rem;
+	padding: 0.733333rem 0.613333rem 0.733333rem 0 ;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.goods_prices{
+	margin-right: 0.16rem;
+}
+.goods_count{
+	color: #1b1515;
+}
+.expressage{
+	margin-right: 0.666666rem;
+}
+.price{
+	font: 0.266666rem/0.266666rem "微软雅黑";
+	color:#cd294e
+}

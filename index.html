@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>首页</title>
+		<link rel="stylesheet" href="css/public_style.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper-4.3.3.min.css"/>
+		<script type="text/javascript" src="js/flexible.js" ></script>
+	</head>
+	<body>
+		<!--page包裹整个页面的div-->
+		<div class="page" >
+			<!--头部公共样式开始-->
+			<header class="head">
+				<div class="head_top">
+					<div class="logo flex_center">
+						<img src="images/logo-02.png"  class="logo_img" />
+					</div>
+					<div class="search " onclick="window.location.href='Commodity_search.html'">
+						<div class="search_input">积分少换礼品 1:1</div>
+					</div>
+					<div class="info">
+						<div class="classify flex_column" onclick="window.location.href='lists.html'">
+								<img src="images/classify.png" alt="" class="classify_img"/>分类
+						</div>
+							<div class="message flex_column" onclick="window.location.href='message.html'" id="message">
+								<img src="images/circular.png" alt="" class="circular"/>
+								<img src="images/message.png" class="message_img"/>消息
+							</div>
+					</div>
+				</div>
+			</header>
+			<!--头部公共样式结束-->  
+			<!--顶部轮播-->
+			<div class="swiper-container swiper-container1" id="banner">
+			  	<div class="swiper-wrapper">
+				    <div class="swiper-slide slide1" v-for="(banner,index) in item" :key="index"  >
+				    	<a href="#">
+							<img :src="'http://ddpointmall.wiwipu.com' + banner.img" />
+						</a>
+				    </div>
+			  	</div>
+			   <div class="swiper-pagination"></div>
+			  	
+			</div>	
+			<!--顶部轮播结束-->
+			<!--活动区域-->
+			<section class="notice " id="notice">
+				<div class="notice_content ">
+					<div class="prompt " >
+						<ul class="prompt_content " :class="{marquee_top:animate}">
+							<li class="gift "  v-for="notic in item"  v-text="notic.content"  ></li>
+						</ul>
+					</div>	
+					
+					<div class="welfare">
+						<ul>
+								<li class="fs23">每日福利</li>
+								<li class="fs18">勇闯积分小游戏</li>
+								<li class="fs18">抢超值大礼</li>
+							</ul>
+							<img src="images/sign.png" class="sign"/>
+							<img src="images/sign2.png" class="sign2"/>
+					</div>
+					<div class="welfare2" >
+						<div class="share">
+							<ul>
+								<li class="fs23">分享有礼</li>
+								<li class="fs18">邀请好友获取积分</li>
+							</ul>
+							<img src="images/share1.png" class="share1"/>
+						</div>
+						<div class="signin">
+							<ul>
+								<li class="fs23">天天签到</li>
+								<li class="fs18">每日签到领积分</li>
+							</ul>
+							<img src="images/sign3.png" class="sign3"/>
+							
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--活动区域结束-->
+			<!--推荐-->
+			<section class="recommend" id="recommend">
+				<div class="recommend_content">
+					<div class="recommend_title">
+						<span class="line"></span>
+   						<span class="txt">优选推荐</span>
+   						<span class="line"></span>
+					</div>
+					
+					<div class="swiper-container swiper-container2">
+						<div class="swiper-wrapper">
+						    <div class="swiper-slide " v-for="(reco,index) in recom" :key="reco.index" @click="goods_click(reco)">
+						    	<img :src="'http://ddpointmall.wiwipu.com' + reco.cover_img" alt="" class="recommend_img"/>
+						    	<p class="recommend_title" v-text="reco.goods_name"></p>
+						    	<div class="money">
+						    		<img src="images/gold.png" class="gold"/>
+									<span class="price" v-text="reco.shop_price"></span>
+						    		
+						    	</div>
+						    </div>
+						    
+					  	</div>
+			  	
+					</div>	
+				</div>
+			</section>
+			
+			<!--推荐结束-->
+			<!--分类列表-->
+			<div  id="lists">
+				<section class="lists">
+					<div class="lists_content">
+							<div class="swiper-container swiper-container3">
+								<div class="swiper-wrapper ">
+								    <div class="swiper-slide flex_center"  v-for="(list,index) in lis"  >
+								 	<a :href="'#'+index"><p class="lists_title" >{{index}}</p></a>	
+								    </div>
+								     
+								 </div>   
+					 		</div>	
+					 		
+					</div>
+				</section>
+
+				<!--分类详情-->
+				<section class="goodsList" v-for="(list,index) in lis" :key="index" >
+					<a href="javacript:void(0)" :name="index"></a>
+					<div class="goodsList_content ">
+						<div class="recommend_title">
+							<span class="line"></span>
+	   						<span class="txt" >{{index}}</span>
+	   						<span class="line"></span>
+							<a class="more flex_center" href="lists.html" @click="go_lists(index)">更多...</a>
+						</div>
+						
+						<div class="goods_details flex_center"  >
+							<div class="goods_detail " v-for="li in list"  @click="goods_click(li)" >
+									<img :src="'http://ddpointmall.wiwipu.com' + li.cover_img"  alt="" class="detail_img"/>
+									<p class="detail_title">{{li.goods_name}}</p>
+									<div class="detail_buy "> 
+										<div class="flex_center">
+											<img src="images/gold.png" alt="" class="detail_buy_img" />
+											<span>{{li.shop_price}}</span>
+										</div>
+<!--										<img src="images/shoppingcart.png" alt="" class="shoppingcart_img"/>-->
+								</div>
+							</div>
+						</div>
+						<p  class="loading flex_center " @click="moregoods(index)">点击加载...</p>
+						
+					</div>
+				</section>
+				<!--分类详情结束-->
+				
+			</div>
+			<!--分类列表结束-->
+			
+
+			<!--返回顶部-->
+			<!--<div class="gotop">-->
+				<img src="images/gotop.png" alt=""  class="gotop" />
+			<!--</div>-->
+			<!--返回顶部结束-->
+			<!--底部公共样式开始-->
+			<footer class="footer" id="footer">
+				<!--foot_1底部提交按钮替换文字即可-->
+				<div class="footer_content">
+					<div class="footer_flex ">
+						<img src="images/shortcut-01a.png" alt="" class="img"/>
+						<span> 好礼推荐</span>
+					</div>
+					<div  class="footer_flex "  onclick="window.location.href='selected_gift.html'" > 
+						<span class="buy_num"  >{{nums}}</span>
+						<img src="images/shortcut-02b.png" alt=""  class="img"/>
+						<span> 已选礼品</span>
+					</div>
+					<div  class="footer_flex " onclick="window.location.href='index_yx.html'">
+						<img src="images/shortcut-03b.png" alt=""  class="img"/>
+						<span> 优选生活</span>
+					</div>
+					<div  class="footer_flex " @click="usercenter">
+						<img src="images/shortcut-04b.png" alt="" class="img"/>
+						<span> 个人中心</span>
+					</div>
+				</div>
+				<div class="tanchuang" id="tan" v-html="tan">	</div>
+			</footer>
+			
+			<!--底部公共样式结束-->
+			
+		</div>
+	</body>
+	<script src="js/jquery-3.3.1.js"></script>
+	<script src="js/vue.js"></script>
+	<script src="js/swiper-4.3.3.min.js"></script>
+	<script src="js/axios.min.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/token.js"></script>
+	<script src="js/vueindex.js"></script>
+	<script src="js/public.js"></script>
+	<script src="js/mui.min.js"></script>
+
+</html>

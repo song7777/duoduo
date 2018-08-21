@@ -1,0 +1,464 @@
+.grzx_box{
+	width: 100%;
+	height: 7rem;
+	display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-bottom: 0.26rem solid #c1c1c1;
+}
+.sy{
+	margin-top: 0.6rem;
+    width: 100%;
+    height: 0.33rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 35px;
+    box-sizing: border-box;
+}
+.yhtx{
+    width: 3.06rem;
+    height: 2.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 auto;
+}
+.yhtx_img1{
+	margin-top: -0.26rem;
+	width: 2.84rem;
+	height: 2.84rem;
+    border-radius:100%;
+    background: url(../images/4.jpg);
+    background-size: 100% 100%;
+}
+.yhtx_img2{
+	width: 0.73rem;
+	height: 0.73rem;
+	background: url(../images/personalbinding.png);
+	background-size: 100% 100%;
+	margin-top: 2.09rem;
+	margin-left: 2rem;
+	border-radius:100%;
+}
+.top_img3{
+	width: 0.24rem;
+	height: 0.24rem;
+	background: url(../images/circular.png);
+	background-size: 100% 100%;
+	border-radius:100%;
+	margin-top: -2.73rem;
+	margin-left: 0.4rem;
+}
+.nc{
+    height: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 0.16rem;
+    margin: 0 auto;
+    font-size: 0.4rem;
+}
+.nc_1{
+    height: 0.26rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 0.26rem;
+    margin: 0 auto;
+    font-size: 0.26rem;
+    padding: 10px 0;
+}
+.nav{
+	width: 100%;
+	height: 1rem;
+    margin-top: 0.66rem;
+    padding: 0 0.26rem;
+    box-sizing: border-box;
+}
+.nav_1{
+	width: 100%;
+	height: 1rem;
+}
+.nav_1_a{
+	display: flex;
+    justify-content: center;
+}
+.zhjf{
+	width: 3rem;
+	height: 1rem;
+	text-align: center;
+	border-right: 2px solid #c1c1c1;
+	display: inline-block;
+}
+.zh{
+	font-size: 0.4rem;
+	letter-spacing:0.02rem;
+	color: #615d5c;
+}
+.jf{
+	color: #71706e;
+	letter-spacing:0.01rem;
+}
+.kyye{
+	width: 3rem;
+	height: 1rem;
+	text-align: center;
+	border-right: 2px solid #c1c1c1;
+	display: inline-block;
+}
+.ky{
+	font-size: 0.4rem;
+	letter-spacing:0.02rem;
+	color: #615d5c;
+}
+.ye{
+	color: #71706e;
+	letter-spacing:0.01rem;
+}
+.ysc{
+	width: 3rem;
+	height: 1rem;
+	text-align: center;
+	display: inline-block;
+}
+.shuliang{
+	font-size: 0.4rem;
+	letter-spacing:0.02rem;
+	color: #615d5c;
+}
+.sc{
+	color: #71706e;
+	letter-spacing:0.01rem;
+}
+.grzx_box1{
+	width: 100%;
+	height: 6rem;
+	display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 0.26rem;
+    box-sizing: border-box;
+    border-bottom: 0.26rem solid #c1c1c1;
+}
+.lp{
+    width: 100%;
+    height: 0.33rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 35px;
+    box-sizing: border-box;
+}
+.wdlp{
+    font-size: 0.33rem;
+    color: #1f1a16;
+}
+.dzgl{
+    font-size: 0.29rem;
+    color: #979797;
+}
+.jt{
+    width: 0.17rem;
+    height: 0.17rem;
+    background-size: 100% 100%;
+}
+.lp_box{
+	width: 100%;
+	height: 2.06rem;
+    justify-content: space-around;
+    border-bottom: 1px solid #979797;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.daizhifu{
+	width: 25%;
+	height: 100%;
+	flex: 1;
+	display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    position: relative;
+}
+.daizhifu_num{
+	width: 0.5rem;
+    height: 0.5rem;
+    background: #dd234c;
+    border-radius: 50%;
+    position: absolute;
+    top: 0.26rem;
+    left: 1.58rem;
+    text-align: center;
+    line-height: 0.5rem;
+    color: #FFFFFF;
+    display: none;
+}
+/* 公共class 换里面的图标*/
+.tb{
+	width: 0.82rem;
+	height: 0.72rem;
+	margin-top: 0.53rem;
+	position:relative;
+}
+/* 公共class  图标下面的文字描述 */
+.describe{
+	margin-top: 0.12rem;
+	text-align: center;
+	color: #807f7d;
+	display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.daishouhuo{
+	width: 25%;
+	height: 100%;
+	display: flex;
+    align-items: center;
+    flex-direction: column;
+    position:relative;
+}
+.daishouhuo_num{
+	width: 0.5rem;
+    height: 0.5rem;
+    background: #dd234c;
+    border-radius: 50%;
+    position: absolute;
+    top: 0.26rem;
+    left: 1.58rem;
+    text-align: center;
+    line-height: 0.5rem;
+    color: #FFFFFF;
+    display: none;
+}
+.yiwancheng{
+	width: 25%;
+	height: 100%;
+	display: flex;
+    align-items: center;
+    flex-direction: column;
+    position:relative;
+}
+.yiwancheng_num{
+	width: 0.5rem;
+    height: 0.5rem;
+    background: #dd234c;
+    border-radius: 50%;
+    position: absolute;
+    top: 0.26rem;
+    left: 1.48rem;
+    text-align: center;
+    line-height: 0.5rem;
+    color: #FFFFFF;
+    display: none;
+}
+.daipingjia{
+	width: 25%;
+	height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;	
+    position:relative;
+}
+.daipingjia_num{
+	width: 0.5rem;
+    height: 0.5rem;
+    background: #dd234c;
+    border-radius: 50%;
+    position: absolute;
+    top: 0.26rem;
+    left: 1.48rem;
+    text-align: center;
+    line-height: 0.5rem;
+    color: #FFFFFF;
+    display: none;
+}
+.tjdd{
+	width: 25%;
+	height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;	
+    position:relative;
+}
+/*.tjdd_num{
+	width: 0.4rem;
+    height: 0.4rem;
+    background: #dd234c;
+    border-radius: 50%;
+    position: absolute;
+    top: 0.26rem;
+    left: 1.58rem;
+    text-align: center;
+    line-height: 0.4rem;
+    color: #FFFFFF;
+}*/
+.dzs{
+	width: 25%;
+	height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;	
+    position: relative;
+}
+/*.dzs_num{
+	width: 0.66rem;
+    height: 0.43rem;
+    background: #dd234c;
+    border-radius: 20px;
+    position: absolute;
+    top: 0.26rem;
+    left: 1.5rem;
+    text-align: center;
+    line-height: 0.43rem;
+    color: #FFFFFF;
+}*/
+.yhz{
+	width: 25%;
+	height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;	
+    position:relative;
+}
+/*.yhz_num{
+	width: 0.4rem;
+    height: 0.4rem;
+    background: #dd234c;
+    border-radius: 50%;
+    position: absolute;
+    top: 0.26rem;
+    left: 1.48rem;
+    text-align: center;
+    line-height: 0.4rem;
+    color: #FFFFFF;
+}*/
+.sygw{
+	width: 25%;
+	height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;	
+    position:relative;
+}
+/*.sygw_num{
+	width: 0.4rem;
+    height: 0.4rem;
+    background: #dd234c;
+    border-radius: 50%;
+    position: absolute;
+    top: 0.26rem;
+    left: 1.38rem;
+    text-align: center;
+    line-height: 0.4rem;
+    color: #FFFFFF;
+}*/
+.gwjf{
+	margin-top: 0.6rem;
+    width: 100%;
+    height: 0.33rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 35px;
+    box-sizing: border-box;
+}
+.gw{
+    font-size: 0.33rem;
+    color: #1f1a16;
+}
+.yxsh{
+    font-size: 0.29rem;
+    color: #979797;
+}
+.gw_box{
+	width: 100%;
+	height: 2.06rem;
+	display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+}
+.popularize{
+	width: 100%;
+	height: 2.86rem;
+	display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 0.26rem;
+    box-sizing: border-box;
+}
+.popularize_box{
+	width: 100%;
+	height: 2.86rem;
+	display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+}
+.tuiguang{
+	width: 3.1rem;
+	height: 100%;
+}
+.tg_img{
+	width: 0.8rem;
+	height: 0.77rem;
+	margin-top: 0.53rem;
+	margin-left: 1.24rem;
+}
+.wdtg{
+	text-align: center;
+	font-size: 0.33rem;
+	margin-top: 0.26rem;
+}
+.tgyl{
+	text-align: center;
+	margin-top: 0.22rem;
+	color: #8b898a;
+}
+.hezuo{
+	width: 3.1rem;
+	height: 100%;
+}
+.tuichu{
+	width: 3.1rem;
+	height: 100%;
+}
+.luanbotu1{
+	display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: 2.29rem;
+    background: url(../images/advert-04.png);
+	background-size: 100% 100%;
+}
+.luanbotu2{
+	display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: 2.29rem;
+    background: url(../images/advert-05.png);
+	background-size: 100% 100%;
+}
+.luanbotu3{
+	display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: 2.29rem;
+    background: url(../images/advert-04.png);
+	background-size: 100% 100%;
+}
+.swiper-container{
+	width: 100%;
+}
+
+.swiper-slide{
+	width: 100%;
+	height: 3.653333rem;
+
+}
+.swiper-slide img{
+	width: 100%;
+	height: 100%;
+}

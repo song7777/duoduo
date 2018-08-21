@@ -1,0 +1,154 @@
+.search{
+	position: relative;
+	border: 0.013rem solid #dd1474;
+	background-color: #FFFFFF;
+	border-radius: 0.333rem;
+	width: 6.666rem;
+	height: 0.666rem;
+	display: flex;
+	overflow: hidden;
+}
+.search_img{
+	margin-left: 0.2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.search_sr{
+	width: 3.8rem;
+	border: none;
+	height: 100%;
+	margin-left: 0.333rem;
+}
+.txt_menu{
+	margin-right: 0.186rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.t_a{
+	justify-content: center;
+	align-items: center;
+	color: #cd4664;
+	margin-right: 0.133rem;
+}
+.t_b{
+	color: #8a8685;
+	margin-left: 0.133rem;
+	}
+.num{
+	position: relative;
+}
+.box_num{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0rem;
+	right: 0.666rem;
+	height: 0.333rem;
+	width: 0.333rem;
+	border-radius: 50%;
+	color: #FFFFFF;
+	background-color: #dd1474;
+}
+.search_nav{
+	position: fixed;
+    z-index: 222;
+    width: 100%;
+    display: flex;
+    height: 1.066rem;
+    background-color: #dededc;
+}
+.nav_1{
+	display: flex;
+	flex: 1;
+}
+.nav_2{
+	display: flex;
+	flex: 1;
+}
+.nav_3{
+	display: flex;
+	flex: 1;
+}
+.nav_sj{
+	margin-left: 0.266rem;
+	position: relative;
+	flex-direction: column;
+}
+.goupb{
+	display: none;
+	position: absolute;
+	bottom:0.213rem;
+}
+.godownb{
+	position: absolute;
+	bottom: 0rem;
+}
+.goup{
+	margin-bottom: 0.106rem;
+}
+.godownc{
+	display: none;
+	position: absolute;
+	bottom:0rem;
+}
+.nav{
+	display: flex;
+	
+}
+.nav_pro{
+	
+	display: flex;
+}
+.pro_img{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 3.16rem;
+	width:3.133rem;
+}
+.pro_txt{
+	margin-top:0.466rem;
+}
+.pro_p{
+	font-size: 25px;
+	margin-bottom: 0.266rem;
+}
+.img_p{
+	width:2.533rem;
+	height: 2.133rem;
+}
+.pro_info{
+	border-bottom: 4px solid #cccc;
+	flex: 1;
+}
+.bottom_info{
+	align-items: center;
+	display: flex;
+	margin-top: 0.36rem;
+	justify-content: space-between;
+}
+.price_num{
+	margin-left: 0.266rem;
+	font-size: 0.333rem;
+	color: #c82c51;
+}
+.sale_num{
+	font-size: 25px;
+}
+.mui-toast-container {
+    bottom: 50% !important;/*离布局底部的距离*/
+    }
+.mui-toast-message {
+	display: flex;
+    opacity: 0.7;/*toast中背景色的透明度*/
+    color: #FFFFFF; /*toast中字体颜色*/
+    width: 180px; /*toast宽度*/
+   	height:0.93rem ;
+    justify-content: center;
+    align-items: center;
+    font-size:0.32rem ;/*toast中文字的位置*/
+   margin-bottom: 1.5rem;
+}

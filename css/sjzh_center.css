@@ -1,0 +1,124 @@
+.page_head{
+	box-sizing: border-box;
+	height: 2rem;
+	background-color:#dededc;
+}
+.page_top{
+	padding: 0 0.333rem;
+	height: 100%;
+	display: flex;
+	
+}
+.top_head1{
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 100%;
+	flex: 1;
+}
+.top_head1_txt1{
+	color:#dc214c ;
+	font-size:0.6rem;
+}
+.top_head1_txt2{
+	margin-top:0.15rem;
+	color:#dc214c ;
+	font-size:0.333rem;
+}
+.top_head1_undline{
+	position: absolute;
+	bottom: 0rem;
+	width: 70%;
+	height: 0.08rem;
+	background-color: #dc214c;
+}
+.top_head2{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 100%;
+	flex: 1;
+}
+.top_head2_txt1{
+	font-size:0.6rem;
+}
+.top_head2_txt2{
+	margin-top:0.15rem;
+	font-size:0.333rem;
+}
+.top_head2 .line{
+	display: flex;
+	width: 100%;
+    border-right: 1px solid #C1C1C1;
+    border-left: 1px solid #C1C1C1;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.top_head3{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 100%;
+	flex: 1;
+}
+.top_head3_txt1{
+	font-size:0.6rem;
+}
+.top_head3_txt2{
+	margin-top:0.15rem;
+	font-size:0.333rem;
+}
+.nav_line{
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	height: 1.6rem;
+}
+.line_left{
+	width: 2.986rem;
+	height: 0.04rem;
+	background-color:#c1c1c1;
+}
+.line_txt{
+	margin-left: 0.466rem;
+	margin-right: 0.466rem;
+}
+.line_right{
+	width: 2.986rem;
+	height: 0.04rem;
+	background-color:#c1c1c1;
+}
+.count_jilu{
+	box-sizing: border-box;
+	height: 1.6rem;
+	padding: 0 0.266rem;
+}
+.jilu_box{
+	height: 100%;
+	border-bottom: 0.013rem solid #C1C1C1;
+    padding: 0 0.266rem;
+}
+.txt_title{
+	margin-top: 0.533rem;
+	font-size: 0.333rem;
+	color:#201b18;
+}
+.txt_box{
+	margin-top: 0.133rem;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+.jilu_txt{
+	font-size: 0.32rem;
+	color: #d8d8d8;
+}
+.jilu_txt1{
+	color:#cd274d;
+	font-size: 0.466rem;
+}

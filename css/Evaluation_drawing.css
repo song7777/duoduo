@@ -1,0 +1,99 @@
+.trunk{
+	width: 100%;
+	padding: 0 0.46rem;
+	box-sizing: border-box;
+}
+.Overall_evaluation{
+	width: 100%;
+	height: 1.76rem;
+	display: flex;
+	align-items: center;
+	font-size: 0.3rem;
+	color: #615d5c;
+}
+.evaluate_label{
+	margin: 0 0.42rem 0 0.07rem;
+}
+.Single_election{
+	width: 1.26rem;
+	height: 0.4rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-right:1.05rem;
+}
+.Evaluation_options{
+	display: block;
+	width: 0.4rem;
+	height: 0.4rem;
+	background: url(../images/select-a.png) no-repeat;
+	background-size: 100% 100%;
+}
+.Evaluation_options_click{
+	width: 0.4rem;
+	height: 0.4rem;
+	background: url(../images/select-b.png) no-repeat;
+	background-size: 100% 100%;
+}
+.Evaluation_picture{
+	width: 100%;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.picture_img{
+	width: 28%;
+	height: 3.08rem;
+	margin-left: 2%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#xdaTanFileImg{
+	display: none;
+}
+.Slide_Show{
+	width:2.3rem ;
+	height:3.08rem ;
+	/*margin-left:0.44rem ;*/
+}
+.Add_pictures{
+	width: 1.17rem;
+	height: 1.57rem;
+	/*margin-left: 0.93rem;*/
+}
+.say{
+	width: 100%;
+	padding: 0 0.5rem;	
+	box-sizing: border-box;
+	margin-top: 0.64rem;
+}
+.say_what{
+	width: 100%;
+	height: 1.2rem;
+	border: 0;
+	border-bottom: 0.02rem solid #c3c3c3;
+	font-size: 0.5rem;
+	padding-left: 0.42rem;
+	box-sizing: border-box;
+	color: #5f5e5c;
+}
+.say_what::placeholder{
+	font-size: 0.4rem;
+}
+//mui弹窗样式修改
+.mui-toast-container {
+    bottom: 50% !important;/*离布局底部的距离*/
+    }
+.mui-toast-message {
+	display: flex;
+    opacity: 0.7;/*toast中背景色的透明度*/
+    color: #FFFFFF; /*toast中字体颜色*/
+    width: 180px; /*toast宽度*/
+   	height:0.93rem ;
+    justify-content: center;
+    align-items: center;
+    font-size:0.32rem ;/*toast中文字的位置*/
+   margin-bottom: 1.5rem;
+}
+//mui弹窗样式修改结束

@@ -1,0 +1,153 @@
+.page{
+	width: 100%;
+	height: 100%;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+.head{
+	width: 100%;
+	height: 1.16rem;
+	background-color: #dc214c;
+	z-index: 9;
+}
+.head_top{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 1.16rem;
+	background-color: #dc214c;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.top_1{
+	width: 1.6rem;
+	height: 100%;
+	padding-right: 0.51rem;
+	box-sizing: border-box;
+}
+.top_a1{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.top_img1{
+	width: 0.34rem;
+	height: 0.37rem;
+}
+.top_2{
+	flex: 1;
+	height: 100%;
+	font-size: 0.32rem;
+	color: #ffffff;
+	letter-spacing:0.02rem;
+	text-align: center;
+	line-height: 1.16rem;
+}
+.top_3{
+	width: 1.6rem;
+	height: 100%;
+}
+.top_a2{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	font-size: 0.3rem;
+	color: #fff5fb;
+	letter-spacing: 0.04rem;
+}
+.top_img2{
+	width: 0.48rem;
+	height: 0.41rem;
+}
+.foot{
+	width: 100%;
+	height: 1.46rem;
+}
+.foot_1{
+	width: 100%;
+	height: 1.46rem;
+	background-color: #dc214c;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	font-size: 0.33rem;
+	color: #FFFFFF;
+	letter-spacing:0.02rem;
+	text-align: center;
+	line-height: 1.46rem;
+	box-shadow: none;
+	border: 0;
+}
+.flex_center{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/*居中*/
+}
+.backcolor1{
+	background:#c1c1c1 ;
+	/*深灰色背景*/
+}
+.backcolor2{
+	background: #FFFFFF;
+	/*白色背景*/
+}
+.backcolor3{
+	background: #dededc;
+	/*灰色背景*/
+}
+.f_color1{
+	color: #DC214C;
+	/*红色字体（价格）*/
+}
+.f_color2{
+	color: #969495;
+	/*灰色字体 （时间，日期）*/
+}
+.f_color3{
+	color: #5f5e5c;
+	/*深灰色字体（底部选项卡）*/
+}
+.footer{
+	width: 100%;
+	height: 1.173333rem;
+
+}
+.footer_content{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	height: 1.173333rem;
+	background-color: #FFFFFF;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	border-top:0.026666rem solid #dededc;
+	
+}
+.footer_flex {
+	width: 25%;
+	height: 100%;
+	color:#5f5e5c;
+	font-size:0.28rem;
+	position: relative;
+	text-align: center;
+	padding-top:0.55rem ;
+	box-sizing: border-box;
+}
+.footer_flex .img{
+	width: 0.88rem;
+	height:0.88rem ;
+	position: absolute;
+	top: -0.24rem;
+	left: 50%;
+	margin-left: -0.44rem;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>账户信息</title>
+		<script type="text/javascript" src="js/vue.min.js" ></script>
+		<link rel="stylesheet" href="css/public_style.css" />
+		<script type="text/javascript" src="js/flexible.js" ></script>
+		<link rel="stylesheet" href="css/Account_information.css" />
+	</head>
+	<body>
+		<!--page包裹整个页面的div-->
+		<div class="page" id="account_inf">
+			<!--头部公共样式开始-->
+			<header class="head">
+				<div class="head_top">
+					<!--top_1头部左边第一个图标 可以换img属性改变图标形状  注意：如果不用图像保留div只删除img-->
+					<div class="top_1"><a class="top_a1"><img class="top_img1" src="images/goback-a.png" onclick="javascript:history.go(-1);"/></a></div>
+					<!--top_2头部文字，替换文字即可！-->
+					<div class="top_2">账户信息</div>
+					<!--top_3头部右边第一个图标 可以换images属性改变图标形状 有文字替换文字，没有文字的删除文字即可  注意：如果不用图像保留div只删除img-->
+					<div class="top_3"><a class="top_a2" href="personal_center.html"><img class="top_img2" src="images/registcenter.png" /></a></div>
+				</div>
+			</header>
+			<!--头部公共样式结束-->
+			
+			
+			<section class="trunk">
+				<div class="integral">
+					<div class="integral_div">
+						<a href="Account_information.html" class="consumption consumption_red">
+							<p class="consumption_shu">{{points}}</p>
+							<p class="consumption_zi">积分账户</p>
+						</a>
+					</div>
+					<div class="huisetiao"></div>
+					<div class="integral_div">
+						<a href="fine_balance.html" class="consumption">
+							<p class="consumption_shu">{{balance}}</p>
+							<p class="consumption_zi">账户余额</p>
+						</a>
+					</div>
+				</div>
+				<div class="Detailed">
+					<div class="shuipinghuitiao"></div>
+					<div class="Detailed_zi">流水明细</div>
+					<div class="shuipinghuitiao"></div>
+				</div>
+				<div v-for="(lists,index) in lists_length" class="expense">
+					<div class="expense_left">
+						<p class="expense_left_zi">{{account_inf.lists[index].des}}</p>
+						<p class="expense_left_time">{{account_inf.lists[index].time}}</p>
+					</div>
+					<div class="expense_right"  v-if="parseInt(account_inf.lists[index].num)>0">{{account_inf.lists[index].num}}</div>
+					<div class="expense_right expense_right_green"  v-else="parseInt(account_inf.lists[index].num)<0">{{account_inf.lists[index].num}}</div>
+				</div>
+			</section>
+		</div>
+		
+	</body>
+	<script type="text/javascript" src="js/token.js" ></script>
+	<script type="text/javascript" src="js/axios.min.js" ></script>
+	<script type="text/javascript" src="js/Account_information.js" ></script>
+</html>
+

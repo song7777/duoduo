@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>申请入驻</title>
+		<link rel="stylesheet" href="css/public_style.css" />
+		<script type="text/javascript" src="js/flexible.js" ></script>
+		<link rel="stylesheet" href="css/Application.css" />
+	</head>
+	<body>
+		<!--page包裹整个页面的div-->
+		<div class="page" id="application">
+			<!--头部公共样式开始-->
+			<header class="head">
+				<div class="head_top">
+					<!--top_1头部左边第一个图标 可以换img属性改变图标形状  注意：如果不用图像保留div只删除img-->
+					<div class="top_1"><a class="top_a1"><img class="top_img1" src="images/goback-a.png" onclick="javascript:history.go(-1);"/></a></div>
+					<!--top_2头部文字，替换文字即可！-->
+					<div class="top_2">申请入驻</div>
+					<!--top_3头部右边第一个图标 可以换img属性改变图标形状 有文字替换文字，没有文字的删除文字即可  注意：如果不用图像保留div只删除img-->
+					<div class="top_3"><a class="top_a2" href="personal_center.html"><img class="top_img2" src="images/registcenter.png" /></a></div>
+				</div>
+			</header>
+			<!--头部公共样式结束-->
+			<section class="trunk">
+				<img src="images/advert-02.png" class="advertisement"/>
+				<div class="strip"></div>
+				<div class="Agreement">
+					<label for="agree"><img src="images/select-a.png" class="select1" @click="selectimga"/></label>
+					<input type="checkbox" name="agree" id="agree" value="" />
+					<p class="clause">已经阅读<a class="clause_a"><<多多礼品商城-入驻条款>></a></p>
+				</div>
+				<div class="information">
+					<label class="information_label">真实姓名：</label>
+					<input type="text" placeholder="请输入真实姓名" class="information_text" v-model="realname"/>
+				</div>
+				<div class="id_car">
+					<span class="id_upload">身份证上传：</span>
+						<div class="Evaluation_picture" >
+							<div class="picture_card" id="ccc">
+								<label for="xdaTanFileImg" class="aaa" @click="bbb">
+									<img class="Add_pictures" src="images/addpic.png" />
+								</label>
+								<input type="file" id="xdaTanFileImg"  multiple="multiple"  name="fileAttach" onchange="xmTanUploadImg(this)"/>
+							</div>
+						</div>
+				</div>
+					<div class="information">
+						<label class="information_label">联系电话：</label>
+						<input type="text" placeholder="请输入联系手机号码" class="information_text" v-model="telephone"/>
+					</div>
+					<div class="information">
+						<label class="information_label">商户名称：</label>
+						<input type="text" placeholder="请输入商户经营店名" class="information_text" v-model="storename"/>
+					</div>
+					<div class="information">
+						<label class="information_label">所属行业：</label>
+						<div class="information_linkaget">
+							<select class="linkaget_content" onchange = "industry()">
+								<option>餐饮食品</option>
+								<option>生活服务</option>
+								<option>便利超市</option>
+								<option>美容美发</option>
+								<option>个体其他</option>
+							</select>
+							<img class="linkaget_label" src="images/gonext.png"  />
+						</div>
+					</div>
+					<div class="linkage_address">
+						<label class="address_label">详细地址：</label>
+						<div class="address">
+							<div class="Urban_linkage">
+								<div class="select">
+									请选择区域
+								</div>
+								<img class="region_choice" src="images/gonext.png"/>
+							</div>
+							<div class="address_2">
+								<input class="det" type="text" placeholder="详细地址"/>
+							</div>
+						</div>
+					</div>
+			</section>
+			<section class="footer">
+				<div class="foot">
+					<div class="submission">
+						<p class="submission_p1">当前状态：<span class="submission_span1">待申请</span></p>
+					</div>
+					<div class="submission submission_red">
+						<p class="submission_red_p1" @click="Submission">提交申请</p>
+					</div>
+				</div>
+			</section>
+		</div>
+		<div class="tc"></div>
+	</body>
+	<!--<script>
+//		var sElect = document.getElementsByClassName("select1");
+//		console.log(sElect[0])
+		 (function(){
+               var sElect = document.getElementsByClassName("select1");
+				var variable = true;
+	                sElect[0].onclick=function(){
+	                	if(variable){
+		                    sElect[0].src = "images/select-b.png"
+		                    variable = false;
+	                   }else{
+	                   	 sElect[0].src = "images/select-a.png"
+		                    variable = true;
+	                   }
+	                }
+            })();
+            
+            
+//          当身份证图片超过两张时添加按钮隐藏
+			var bbb = document.getElementById("bbb");
+			bbb.onclick = function(){
+				var picture_card = document.getElementsByClassName("picture_card");
+				console.log(picture_card.length)
+				if(picture_card.length == 2){
+					bbb.style.display="none";
+				}
+			}
+			
+			
+//拿到select选择的值
+		var selecttext = "餐饮食品";
+		 function industry(){
+			var  myselect=document.getElementsByClassName("linkaget_content");
+			var x=myselect[0].selectedIndex; 
+			 selecttext =  myselect[0].options[x].text;
+			console.log(selecttext)
+			}
+		 
+		
+		 
+</script>-->
+	<script type="text/javascript" src="js/token.js" ></script>
+	<script type="text/javascript" src="js/vue.min.js" ></script>
+	<script type="text/javascript" src="js/axios.min.js" ></script>
+	<script type="text/javascript" src="js/Application.js" ></script>
+	<script type="text/javascript" src="js/city.js" ></script>
+	<script type="text/javascript" src="js/index2.js" ></script>
+</html>

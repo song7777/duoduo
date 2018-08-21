@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>商家账户中心</title>
+		<link rel="stylesheet" href="css/public_style.css" />
+		<link rel="stylesheet" href="css/acount_center.css" />
+		<script type="text/javascript" src="js/flexible.js" ></script>
+	</head>
+	<body>
+		<div class="page">
+			<header class="head">
+				<div class="head_top">
+					<div class="top_1"><a class="top_a1"><img class="top_img1"  src="images/goback-a.png" /></a></div>
+					<div class="top_2">商家账户中心</div>
+					<div class="top_3"><a class="top_a2"><img class="top_img2"  src="images/registcenter.png" /></a></div>
+				</div>
+			</header>
+			
+		    <section class="acount_page" id="count_center">
+		    	<div class="acount_je">
+		    		<div class="je_content">
+		    			<span class="txt_je">{{jine}}}&nbsp;:</span>
+		    			<span class="txt_num">{{num}}<i class="sj" style="color: #000;font-size:0.266rem;margin-left: 0.266rem;">元</i></span>
+		    		</div>
+		    	</div>
+		    	<div class="acount_je">
+		    		<div class="je_content">
+		    			<span class="txt_je">申请提现&nbsp;:</span>
+		    			<span style="color:#9f9e9c;">请输入提现金额</span>
+		    		</div>
+		    	</div>
+		    	<div class="acount_vx">
+		    		<div class="vx_content">
+		    			<span class="txt_je">当前微信收款账户&nbsp;:</span>
+		    			<div class="acount_info flex_center">
+		    			<span >更换收款账户</span>
+		    			<img  src="images/gonext.png" width="15px";height="15px" style="margin-left: 0.133rem;"/>
+		    			</div>
+		    		</div>
+		    	    <div class="acount_user">
+		    	    	<div class="acount_img"><img  src="images/user.jpg"/></div>
+		    	    	<div class="acount_txt">
+		    	    		<p style="font-size: 0.333rem;">吉吉MAX</p>
+		    	    		<p class="acount_p_txt">
+		    	    		<span>广东</span><span class="acount_txt1">佛山</span><span>女</span>
+		    	    		</p>
+		    	    	</div>
+		    	    	<div class="acount_gou"><img  src="images/resultright-2.png"/></div>
+		    	    </div>
+		    	</div>
+		        <p class="acount_p_bot">
+		        	提现在工作日2小时内到微信零钱，请注意查收！
+		        </p> 
+		    </section>
+			
+			
+			<footer class="foot">
+					<a><button class="foot_1">申请提现</button></a>
+			</footer>
+		</div>
+	</body>
+	<script src="js/axios.min.js"></script>
+	<script src="js/vue.js" ></script>
+	<script src="js/account_center.js"></script>
+</html>

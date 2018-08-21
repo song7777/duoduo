@@ -1,0 +1,144 @@
+.sg-content{
+    box-sizing: border-box;
+    padding: 0.26rem 0.42rem 0.26rem 0.42rem;
+    border-bottom: 1px solid #DEDEDC;
+}
+.sg-goods{
+	widows: 100%;
+	height: 2.26rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.sg-select,.sg-selectAll{
+	width: 0.44rem;
+	height: 0.45rem;
+	-webkit-appearance:none;
+	background: url(../images/select-a.png) no-repeat;
+	background-size: 100% 100%;
+}
+.sg-delete{
+	width: 0.44rem;
+	height: 0.45rem;
+}
+.sg-select:checked,.sg-selectAll:checked{
+	background: url(../images/select-b.png) no-repeat;
+	background-size: 100% 100%;
+}
+.sg-goods-select{
+	box-sizing: border-box;
+	padding-left:0.86rem;
+	margin-top: 0.33rem;
+}
+.sg-goods-select .gd-goods-space{
+	padding: 0;
+}
+.sg-goods-info{
+	flex: 1;
+}
+.sg-goods-img{
+	height: 2.32rem;
+}
+.sg-goods-info{
+	display: flex;
+	box-sizing: border-box;
+	padding: 0 0 0 0.73rem;
+}
+.info-space{
+	width: 100%;
+	margin-left: 0.26rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.sg-goods-name{
+	overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+.sg-goods-property{
+	color: #969495;
+}
+.ml{
+	margin-left: 0.26rem;
+}
+.sg-goods-price{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.sg-goods-price .rg-goods-price{
+	margin: 0;
+}
+.m2{
+	margin-top: 0.2rem;
+}
+.parameter-select .m1{
+	margin-left: 0;
+}
+.nowBuy{
+	width: 100%;
+	height: 1.49rem;
+}
+.sg_nowBuy{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: 1.49rem;
+	width: 100%;
+	z-index: 9;
+	display: flex;
+	border-top:1px solid #DEDEDC ;
+	background: #FFF;
+}
+.nowBuy-select{
+	flex: 1;
+	justify-content: space-around;
+}
+
+.nowBuy-amount{
+	margin-left: 0.26rem;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.na-icon{
+	width: 0.4rem;
+}
+.na-money{
+	color: #DC214C;
+	font-size: 0.4rem;
+	font-weight: bold;
+	margin-left: 0.2rem;
+}
+.nowBuy-btn{
+	width: 2.53rem;
+	background: #DC214C;
+	border: none;
+	color: #FFF;
+}
+.gift{
+	width:100% ;
+	margin-top: 2.773333rem;
+}
+.gift_content{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 0.293333rem;
+}
+.gift_content .img{
+	width: 2.52rem;
+	height: 2.213333rem;
+}
+.notAdd{
+	margin-top: 0.746666rem ;
+}
+.recommend{
+	color: #178bc6;
+	padding: 0.546666rem;
+	box-sizing: border-box;
+}

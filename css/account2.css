@@ -1,0 +1,88 @@
+.page_head{
+	box-sizing: border-box;
+	height: 2rem;
+	background-color:#dededc;
+}
+.page_top{
+	padding: 0 0.333rem;
+	height: 100%;
+	display: flex;
+	
+}
+.top_head3{
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 100%;
+	flex: 1;
+}
+.top_head3_txt1{
+	color:#dc214c ;
+	font-size:0.6rem;
+}
+.top_head3_txt2{
+	margin-top:0.15rem;
+	color:#dc214c ;
+	font-size:0.333rem;
+}
+.top_head3_underline{
+	position: absolute;
+	bottom: 0rem;
+	width: 70%;
+	height: 0.08rem;
+	background-color: #dc214c;
+}
+.top_head1{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 100%;
+	flex: 1;
+}
+.top_head1_txt1{
+	font-size:0.6rem;
+}
+.top_head1_txt2{
+	margin-top:0.15rem;
+	font-size:0.333rem;
+}
+.top_head2 .line{
+	display: flex;
+	width: 100%;
+    border-right: 1px solid #C1C1C1;
+    border-left: 1px solid #C1C1C1;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.top_head2{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 100%;
+	flex: 1;
+}
+.top_head2_txt1{
+	font-size:0.6rem;
+}
+.top_head2_txt2{
+	margin-top:0.15rem;
+	font-size:0.333rem;
+}
+.p_txt{
+	margin-top: 0.866rem;
+}
+.p_box{
+	height: 0.933rem;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	color: #5f5e5c;
+	line-height: 2;
+}

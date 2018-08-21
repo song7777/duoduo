@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+		<script type="text/javascript" src="js/flexible.js"></script>
+		<link rel="stylesheet" href="css/public_style.css" />
+		<link rel="stylesheet" href="css/swiper.min.css" />
+		<link rel="stylesheet" href="css/selected_gift.css" />
+		<link rel="stylesheet" href="css/gift_details.css" />
+	</head>
+
+	<body>
+		<div class="page" id="gift_car">
+			<header class="head">
+				<div class="head_top">
+					<div class="top_1">
+						<a class="top_a1" onclick="javascript:history.go(-1);">
+							<img class="top_img1" src="images/goback-a.png" />
+						</a>
+					</div>
+					<div class="top_2">已选礼品</div>
+					<div class="top_3"></div>
+				</div>
+			</header>
+			<section class="gift">
+				<div class="gift_content">
+					<img src="images/shoppingcart-empty.png" alt="" class="img" />
+					<p class="notAdd">您还未添礼品</p>
+					<p class="recommend" onclick="window.location.href='index.html'">看看推荐的好礼</p>
+				</div>
+			</section>
+			<section class="sg-content" v-for="num in giftNum" v-bind:id="num.id">
+				<div class="sg-goods">
+					<input type="checkbox" class="sg-select" v-bind:data-id="num.id" @click="singleSelect" />
+					<div class="sg-goods-info">
+						<img class="sg-goods-img" :src="'http://ddpointmall.wiwipu.com'+num.goods.cover_img" />
+						<div class="info-space">
+							<p class="sg-goods-name">{{num.goods.goods_name}}</p>
+							<p class="sg-goods-property">
+								<span>颜色：{{num.spec_2}}</span>
+								<span class="ml">尺寸：{{num.spec_3}}</span>
+							</p>
+							<div class="sg-goods-price">
+								<p class="rg-goods-price f_color1">
+									<img class="rg-gp-icon" src="images/gold.png" /> {{num.price}}
+								</p>
+								<div class="parameter-select m2">
+									<input type="button" value="-" class="gd-goods-less f_color2 m1" @click="lessGift" v-bind:data-id="num.id" />
+									<input type="number" v-model="num.buy_num" class="gd-goods-number f_color1" />
+									<input type="button" value="+" class="gd-goods-add f_color2" @click="addGift" v-bind:data-id="num.id" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<footer class="nowBuy">
+				<div class="sg_nowBuy">
+					<div class="nowBuy-select flex_center">
+						<input id="sg-selectAll" class="sg-selectAll" @click="allSelect" type="checkbox" />全选
+						<img class="sg-delete" src="images/delete.png" @click="sDelete" />删除
+					</div>
+					<div class="nowBuy-amount">
+						<p>选择{{sNumber}}件</p>
+						<p>合计：<span class="na-money">{{amount}}</span></p>
+					</div>
+					<button class="nowBuy-btn flex_center" @click="buy">立即兑换</button>
+				</div>
+			</footer>
+		</div>
+	</body>
+	<script src="js/mui.min.js" ></script>
+	<script src="js/vue.js"></script>
+	<script src="js/axios.min.js"></script>
+	<script src="js/token.js"></script>
+	<script src="js/select_gift.js"></script>
+
+</html>

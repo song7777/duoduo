@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>扫码支付</title>
+		<link rel="stylesheet" type="text/css" href="css/public_style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/payment_WEB.css"/>
+		<script type="text/javascript" src="js/flexible.js" ></script>
+	</head>
+	<body>
+		<!--page包裹整个页面的div-->
+		<div class="page">
+			<!--头部公共样式开始-->
+			<header class="head">
+				<div class="head_top">
+					<!--top_1头部左边第一个图标 可以换img属性改变图标形状-->
+					<div class="top_1"></div>
+					<!--top_2头部文字，替换文字即可！-->
+					<div class="top_2">扫码支付</div>
+					<!--top_3头部右边第一个图标 可以换img属性改变图标形状 有文字替换文字，没有文字的删除文字即可-->
+					<div class="top_3"></div>
+				</div>
+			</header>
+			<!--头部公共样式结束-->
+			<section class="box">
+				<div class="box_a">
+					<div class="box_a_1">
+						<p class="qxzf">取消支付</p>
+						<div class="tx">
+							<img class="touxiang" src="images/4.jpg"/>
+							<p class="nichneg">吉吉MAX</p>
+						</div>
+					</div>
+					<div class="box_a_2">
+						<p class="zhifujine">支付金额:</p>
+						<div class="jine">
+							<p class="rmb">￥</p><input type="text" class="shuru"/>
+						</div>
+						<input type="text" class="zfsm" placeholder="支付说明：如需请输入"/>
+						<p class="zs">商家赠与<span class="sl"> 5 </span>个多多币积分</p>
+					</div>
+					<div class="box_a_3">
+					    <p class="lijizhifu">立即支付</p>
+				    </div>
+				</div>
+				<div class="box_b">
+					<div class="wxzfdl">
+						<p class="wxzfcg">微信支付成功</p>
+					</div>
+					<div class="tp"></div>
+				</div>
+			</section>
+			
+		</div>
+	</body>
+</html>

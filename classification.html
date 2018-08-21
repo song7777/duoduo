@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>商品分类</title>
+		<link rel="stylesheet" href="css/public_style.css" />
+		<script type="text/javascript" src="js/flexible.js" ></script>
+		<link rel="stylesheet" href="css/classification.css" />
+		<link rel="stylesheet" href="css/swiper.min.css" />
+		<link rel="stylesheet" href="css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+	</head>
+	<body>
+		<div id="toptop"></div>
+		<div class="page" id="cLas">
+			<!--头部公共样式开始-->
+			<header class="head">
+				<div class="head_top">
+					<div class="logo flex_center">
+						<img src="images/logo-02.png"  class="logo_img" />
+					</div>
+					<div class="search" onclick="window.location.href='Commodity_search.html'">
+						<input type="text" placeholder="积分少换礼品 1:1" class="search_input"/>
+					</div>
+					<div class="info">
+						<div class="classify flex_column" onclick="window.location.href='lists.html'">
+								<img src="images/classify.png" alt="" class="classify_img"/>分类
+						</div>
+							<div class="message flex_column" onclick="window.location.href='message.html'" id="message">
+								<img src="images/circular.png" alt="" class="circular"/>
+								<img src="images/message.png" class="message_img"/>消息
+							</div>
+					</div>
+				</div>
+			</header>
+			<!--头部公共样式结束-->  
+
+			<section class="trunk">
+				<div class="Sidebar_nav_left">
+					<ul class="Sidebar_left_ul">
+						<li v-for="(lists,index) in lists_length" class="Sidebar_left_li">
+							<p class="left_li_p" @click="fenlei">{{cLas.lists[index].catename}}</p>
+						</li>
+					</ul>
+				</div>
+				<div class="Sidebar_nav_right">
+					<div class="swiper-container">
+				  		<ul class="swiper-wrapper">
+						<li class="swiper-slide" v-for="(slider,index) in items" :key="index" :class="'swiper-slide'">
+							<a href="#">
+								<img class="Advertisement_img" :src="'http://ddpointmall.wiwipu.com' + item[index].img" />
+							</a>
+						</li>
+						</ul>
+				  		 <div class="swiper-pagination"></div>
+					</div>
+		
+					<ul class="commodity_ul">
+						<li v-for="li3 in lists3[0]" class="commodity_li">
+							<a>
+							<div class="commodity_div" onclick="window.location.href='popup_commodity.html'" >
+								<img class="commodity_img1" :src="'http://ddpointmall.wiwipu.com'+li3.cover_img" onerror="this.src='images/timg2.gif'"/>
+								<p class="commodity_p1">{{li3.goods_name}}</p>
+								<div class="Discount">0</div>
+								<p class="commodity_p2">￥123.00</p>
+							</div>
+							</a>
+						</li>
+					</ul>
+					<div class="Set_top">
+						<a href="#toptop"><img class="Set_top_img" src="images/gotop.png"/></a>
+					</div>
+					
+				</div>
+			</section>
+		</div>
+		<!--底部选项卡公共样式开始-->
+			<footer class="footer" id="footer">
+				
+				<div class="footer_content">
+					<div class="footer_flex " onclick="window.location.href='index.html'">
+						<img src="images/shortcut-01b.png" alt="" class="img"/>
+						<span> 好礼推荐</span>
+					</div>
+					<div  class="footer_flex " onclick="window.location.href='selected_gift.html'"> 
+						<span class="buy_num">6</span>
+						<img src="images/shortcut-02b.png" alt=""  class="img"/>
+						<span> 已选礼品</span>
+					</div>
+					<div  class="footer_flex " onclick="window.location.href='index_yx.html'">
+						<img src="images/shortcut-03a.png" alt=""  class="img"/>
+						<span> 优选生活</span>
+					</div>
+					<div  class="footer_flex " @click="usercenter">
+						<img src="images/shortcut-04b.png" alt="" class="img"/>
+						<span> 个人中心</span>
+					</div>
+				</div>
+				<div class="tanchuang" id="tan" v-html="tan"></div>
+			</footer>
+			<!--底部选项卡公共样式结束-->
+	</body>	
+	<script src="js/jquery-3.3.1.js"></script>
+	<script src="js/vue.min.js"></script>
+	<script src="js/swiper-4.3.3.min.js"></script>
+	<script src="js/axios.min.js"></script>
+	<script type="text/javascript" src="js/mui.min.js" ></script>
+	<script type="text/javascript" src="js/token.js" ></script>
+	<script type="text/javascript" src="js/classification.js" ></script>
+	<script type="text/javascript" src="js/public.js" ></script>
+</html>

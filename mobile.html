@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>绑定手机</title>
+		<link rel="stylesheet" href="css/public_style.css" />
+		<link rel="stylesheet" type="text/css" href="css/registration.css"/>
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+		<script type="text/javascript" src="js/flexible.js" ></script>
+	</head>
+	<body>
+		<!--page包裹整个页面的div-->
+		<div class="page" id="pinless">
+			<!--头部公共样式开始-->
+			<header class="head">
+				<div class="head_top">
+					<!--top_1头部左边第一个图标 可以换img属性改变图标形状-->
+					<div class="top_1"><a class="top_a1"><img class="top_img1" src="images/goback-a.png" /></a></div>
+					<!--top_2头部文字，替换文字即可！-->
+					<div class="top_2">绑定手机</div>
+					<!--top_3头部右边第一个图标 可以换img属性改变图标形状 有文字替换文字，没有文字的删除文字即可-->
+					<div class="top_3" @click="home_page">
+						<a class="top_a2"><img class="top_img2" src="images/registhomepae.png" />首页</a>
+					</div>
+				</div>
+			</header>
+			<!--头部公共样式结束-->
+			<!--  -->
+			<section class="xyhzc_box">
+				<!-- 手机号注册 -->
+				<div class="shoujihao">
+					<img class="box_img1" src="images/registaccount.png" />
+					<input type="text" class="sjh" placeholder="手机号" v-model="mobile"/>
+				</div>
+				<!-- 验证码注册 -->
+				<div class="yanzhengma">
+					<div class="yzm">
+						<img class="box_img1" src="images/registmessage.png" />
+						<input type="text" class="sjh" placeholder="验证码" v-model="code"/>
+					</div>
+					<div class="dxyz">
+						<button class="duanxinyanzheng" @click="verify">{{cont}}</button>
+					</div>
+				</div>
+				<!-- 设置密码 -->
+				<div class="shezhimima">
+					<img class="box_img1" src="images/registpassword.png" />
+					<input type="password" class="sjh" placeholder="设置密码" v-model="password"/>
+				</div>
+				<!-- 确认密码 -->
+				<div class="querenmima">
+					<img class="box_img1" src="images/registpassword.png" />
+					<input type="password" class="sjh" placeholder="确认密码" v-model="passwords"/>
+				</div>
+				<!-- 用户注册协议 -->
+				<div class="yhzcxy">
+					<img class="box_img2" src="images/select-a.png" id="img2"/>
+					<p class="yhxy">阅读《用户注册使用协议》</p>
+				</div>
+				<div class="register">
+					<p class="lijizhuce" @click="zhuce">立即注册</p>
+				</div>
+			</section>
+		</div>
+	</body>
+	<script src="js/axios.min.js"></script>
+	<script src="js/vue.min.js"></script>
+	<script src="js/mui.min.js"></script>
+	<script src="js/mobile.js"></script>
+</html>

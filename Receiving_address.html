@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>收货地址</title>
+		<link rel="stylesheet" href="css/public_style.css" />	
+		<script type="text/javascript" src="js/flexible.js" ></script>
+		<link rel="stylesheet" href="css/mui.min.css" />
+		<link rel="stylesheet" href="css/Receiving_address.css" />
+	</head>
+	<body>
+		<!--page包裹整个页面的div-->
+		<div class="page" id="recAdd">
+			<!--头部公共样式开始-->
+			<header class="head">
+				<div class="head_top">
+					<!--top_1头部左边第一个图标 可以换img属性改变图标形状  注意：如果不用图像保留div只删除img-->
+					<div class="top_1"><a class="top_a1"><img class="top_img1" src="images/goback-a.png" onclick="javascript:history.go(-1);"/></a></div>
+					<!--top_2头部文字，替换文字即可！-->
+					<div class="top_2">收货地址</div>
+					<!--top_3头部右边第一个图标 可以换img属性改变图标形状 有文字替换文字，没有文字的删除文字即可  注意：如果不用图像保留div只删除img-->
+					<div class="top_3"><a class="top_a2"></a></div>
+				</div>
+			</header>
+			<!--头部公共样式结束-->
+			<!--主体内容开始-->
+			<section class="trunk">
+				<!--灰色小条-->
+				<div class="huisetiao"></div>
+				<!--所在地区-->
+				<div class="region">
+					<p class="region_label">所在地区：</p>
+					
+					<div class="Urban_linkage">
+						<div class="select">
+							请选择区域
+						</div>
+						<img class="region_choice" src="images/gonext.png"/>
+					</div>
+				</div>
+				<div class="Detailed_address ">
+					<label class="label">详细地址：</label>
+					<input v-model="address"  class="information" type="text" placeholder="请输入详细地址"/>
+				</div>
+				
+				<div class="Detailed_address ">
+					<label class="label">收货电话：</label>
+					<input v-model="mobile"  class="information" type="text" placeholder="请输入收货电话"/>
+				</div>
+				
+				<div class="Detailed_address ">
+					<label class="label">收货人：</label>
+					<input v-model="consignee"  class="information" type="text" placeholder="请输入收货人"/>
+				</div>
+			</section>
+			<!--主体内容结束-->
+			
+			<!--底部公共样式开始-->
+			<footer class="foot">
+				<!--foot_1底部提交按钮替换文字即可-->
+					<a><button class="foot_1" @click="preservation" >保存信息</button></a>
+			</footer>
+			<!--底部公共样式结束-->
+		</div>
+	</body>
+	<script type="text/javascript" src="js/token.js" ></script>
+	<script type="text/javascript" src="js/vue.min.js" ></script>
+	<script type="text/javascript" src="js/mui.min.js" ></script>
+	<script type="text/javascript" src="js/axios.min.js" ></script>
+	<script type="text/javascript" src="js/Receiving_address.js" ></script>
+	<script type="text/javascript" src="js/city.js" ></script>
+	<script type="text/javascript" src="js/index2.js" ></script>
+</html>

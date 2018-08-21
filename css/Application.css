@@ -1,0 +1,319 @@
+/*城市三级联动css开始*/
+.select{
+	width: 100%;
+    height: 0.58rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	border: 0;
+    font-size: 0.32rem;  
+    color: #5f5e5c;
+}
+
+.win{
+	width: 100%;
+	height: 200px;
+	background-color: #f9f9f9;
+	overflow: hidden;
+	position: fixed;
+	bottom: -200px;
+	border-top:1px solid #b22023;
+	transition: transform 0.5s;
+	transform: translateY(0px);
+	z-index:9999;
+}
+.win .current{
+	width: 100%;
+	height: 40px;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	transform: none;
+	position: absolute;
+	top: 80px;
+}
+
+.win div{
+	width: 32%;
+	height: auto;
+	float: left;
+	transform: translateY(80px);
+}
+
+
+.win div span{
+	display: block;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	overflow: hidden;
+	text-align: center;
+}
+
+.win .city{
+	margin:0 2%;
+}
+
+.win .ok,.win .resut{
+	position: absolute;
+	width: 50px;
+	height: 30px;
+	background-color: #f33;
+	color: #fff;
+	text-align: center;
+	line-height: 30px;
+	border-radius: 6px;
+	top: -80px;
+	z-index:9998;
+}
+.win .resut{
+	background-color: #ddd;
+}
+.win .ok{
+	right: 0;
+}
+/*城市三级联动css结束*/
+
+.trunk{
+	width: 100%;
+}
+.advertisement{
+	width: 100%;
+	height: 1.68rem;
+	display: block;
+}
+.strip{
+	width: 100%;
+	height: 0.21rem;
+	background: #dededc;
+}
+.Agreement{
+	width: 100%;
+	height: 1.73rem;
+	background: #FFFFFF;
+	display: flex;
+	align-items: center;
+	border-bottom: 0.04rem solid #c1c1c1;
+	box-sizing: border-box;
+}
+.select1{
+	width: 0.42rem;
+	height: 0.45rem;
+	margin-right: 0.42rem;
+	margin-left: 0.72rem;
+}
+#agree{
+	display: none;
+}
+.clause{
+	font-size: 0.28rem;
+	color: #61605e;
+	letter-spacing: 0.05rem;
+}
+.clause_a{
+	text-decoration: underline;
+}
+.information{
+	width: 100%;
+	height: 1.46rem;
+	background: #FFFFFF;
+	border-bottom: 0.04rem solid #c1c1c1;
+	display: flex;
+	align-items: center;
+	padding: 0 0.44rem;
+	box-sizing: border-box;justify-content: space-between;
+}
+.information_label{
+	font-size: 0.29rem;
+	color: #5f5e5c;
+}
+.information_text{
+	width: 3.34rem;
+	height: 0.3rem;
+	font-size: 0.29rem;
+	color: #949590;
+	letter-spacing: 0.02rem;
+	border: 0;
+	box-shadow: none;
+}
+.id_car{
+	width: 100%;
+	height: 3.12rem;
+	padding: 0.64rem 0.44rem 0;
+	border-bottom: 0.04rem solid #c1c1c1;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+}
+.id_upload{
+	font-size: 0.29rem;
+	color: #5f5e5c;
+}
+.Evaluation_picture{
+	width: 6.33rem;
+	height: 2.13rem;
+	display: flex;
+	align-items: center;
+}
+#xdaTanFileImg{
+	display: none;
+}
+.picture_card{
+	width: 2.74rem;
+	height: 2.05rem;
+	margin-right: 0.4rem;
+}
+.Add_pictures{
+	width: 1.74rem;
+	height: 2.05rem;
+}
+.Slide_Show{
+	width: 2.74rem;
+	height: 2.05rem;
+}
+.addpic_2{
+	width: 3rem;
+	height: 2.06rem;
+}
+.addpic_1{
+	width: 3rem;
+	height: 2.06rem;
+	margin-left: 0.44rem;
+}
+.information_linkaget{
+	width: 3.34rem;
+	height: 0.3rem;
+	font-size: 0.29rem;
+	color: #949590;
+	letter-spacing: 0.02rem;
+	display: flex;
+}
+.linkaget_content{
+	color: #949590;
+    -webkit-appearance: none;
+    width: 2.46rem;
+    height: 0.53rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    background: #ffffff;
+}
+.linkaget_label{
+	width: 0.34rem;
+	height: 0.46rem;
+}
+.linkage_address{
+	width: 100%;
+	height: 2.2rem;
+	background: #FFFFFF;
+	border-bottom: 0.04rem solid #c1c1c1;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	padding: 0.61rem 0.37rem 0;
+	color: #5f5e5c;
+}
+.address{
+	display: flex;
+	flex-direction: column;
+	width: 6.33rem;
+	height: 1.46rem;
+}
+.det{
+	border: 0;
+	box-shadow: none;
+	text-align: end;
+}
+.Urban_linkage{
+	display: flex;
+}
+.address_1{
+	height: 0.46rem;
+	display: flex;
+}
+.provinces{
+	width: 3rem;
+	height: 100%;
+	font-size: 0.32rem;
+	color: #999896;
+}
+.address_2{
+	margin-top: 0.33rem;
+	font-size: 0.32rem;
+	color: #999896;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.footer{
+	width: 100%;
+	height: 1.24rem;
+}
+.foot{
+	width: 100%;
+	height: 1.24rem;
+	position: fixed;
+	bottom:0;
+	left: 0;
+	display: flex;
+}
+.submission{
+	flex: 1;
+	font-size: 0.3rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #dededc;
+}
+.submission_p1{
+	color: #615d5c;
+}
+.submission_span1{
+	color: #a44f62;
+}
+.submission_red{
+	background: #dc214c;
+}
+.submission_red_p1{
+	color: #FFFFFF;
+}
+/*弹窗css样式*/
+.backgd {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(1, 1, 1, 0.3);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.tcym {
+	width: 3.46rem;
+	height: 2rem;
+	display: flex;
+	background: rgba(1, 1, 1, 0.6);
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
+}
+
+.result {
+	color: #F1F2F4;
+	font-size: 0.3rem;
+}
+
+.Sure {
+	width: 1.33rem;
+	height: 0.66rem;
+	font-size: 0.32rem;
+	background: rgba(1, 1, 1, 0.4);
+	;
+	color: #F1F2F4;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+/*弹窗css样式结束*/

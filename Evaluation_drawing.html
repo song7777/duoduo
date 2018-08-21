@@ -1,0 +1,84 @@
+﻿src<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>评价晒图</title>
+		<link rel="stylesheet" href="css/mui.min.css" />
+		<link rel="stylesheet" href="css/public_style.css" />
+		<link rel="stylesheet" href="css/Evaluation_drawing.css" />
+		<script type="text/javascript" src="js/flexible.js" ></script>
+		<script type="text/javascript" src="js/mui.min.js" ></script>
+	</head>
+	<body>
+		<!--page包裹整个页面的div-->
+		<div class="page" id="evaDra">
+			<!--头部公共样式开始-->
+			<header class="head">
+				<div class="head_top">
+					<!--top_1头部左边第一个图标 可以换img属性改变图标形状  注意：如果不用图像保留div只删除img-->
+					<div class="top_1"><a class="top_a1"><img class="top_img1" src="images/goback-a.png"  onclick="javascript:history.go(-1);"/></a></div>
+					<!--top_2头部文字，替换文字即可！-->
+					<div class="top_2">评价晒评</div>
+					<!--top_3头部右边第一个图标 可以换img属性改变图标形状 有文字替换文字，没有文字的删除文字即可  注意：如果不用图像保留div只删除img-->
+					<div class="top_3"><a class="top_a2" href="personal_center.html"><img class="top_img2" src="images/registcenter.png" /></a></div>
+				</div>
+			</header>
+			<!--头部公共样式结束-->
+			<!--主体内容开始-->
+			<section class="trunk">
+				<!--整体评价模块-->
+				<div class="Overall_evaluation">
+					<label class="evaluate_label">整体评价：</label>
+					<div class="Single_election">
+						<div class="Evaluation_options"></div>
+						<input style="display: none;" type="radio" name="pj"/>好评
+					</div>
+					<div class="Single_election">
+						<div class="Evaluation_options"></div>
+						<input style="display: none;" type="radio" name="pj"/>中评
+					</div>
+					<div class="Single_election">
+						<div class="Evaluation_options"></div>
+						<input style="display: none;" type="radio" name="pj"/>差评
+					</div>				
+				</div>
+				<div class="Evaluation_picture" >
+					<!--<div class="picture_img"><img class="Slide_Show" src="images/timg.jpg" /></div>-->
+					<div class="picture_img" id="ccc">
+						<label for="xdaTanFileImg" id="bbb">
+							<img class="Add_pictures" src="images/addpic.png" />
+						</label>
+						
+						<!--<form action="http://ddpointmall.wiwipu.com/index.php/api/goods/addComment" enctype="multipart/form-data" method="post" target="fine_balance.html">
+							<input type="file" id="xdaTanFileImg"   name="images[]" onchange="xmTanUploadImg(this)"/>
+							<input type="hidden" name="access_token" value="4ac939f945c192c87121fcc2bf43e2ea"/>
+							<input type="hidden" name="goods_id" value="11935"/>
+							<input type="hidden" name="goods_grade" value="差评"/>
+							<input type="hidden" name="content" value="1231321313"/>
+							<input style="display: block;height: 0.4rem;width: 0.4rem;background: red;" type="submit" value="images"/>
+						</form>-->
+						
+						<input type="file" id="xdaTanFileImg"   name="images[]" onchange="xmTanUploadImg(this)"/>
+						
+					</div>
+				</div>
+				<div class="say">
+					<input v-model="comment"  type="text" class="say_what" placeholder="说些什么"></input>
+				</div>
+			</section>
+			<!--主体内容结束-->
+			<!--底部公共样式开始-->
+			<footer class="foot">
+				<!--foot_1底部提交按钮替换文字即可-->
+					<a><button  class="foot_1" @click="Sub" >提交</button></a>
+			</footer>
+			<!--底部公共样式结束-->
+		</div>
+	</body>
+	<script type="text/javascript" src="js/token.js" ></script>
+	<script type="text/javascript" src="js/mui.min.js" ></script>
+	<script type="text/javascript" src="js/vue.min.js" ></script>
+	<script type="text/javascript" src="js/axios.min.js" ></script>
+	<script type="text/javascript" src="js/Evaluation_drawing.js" ></script>
+	<script type="text/javascript" src="js/Evaluation_drawing2.js" ></script>
+</html>

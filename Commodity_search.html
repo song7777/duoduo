@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>商品搜索</title>
+		
+		<link rel="stylesheet" href="css/public_style.css" />
+		<link rel="stylesheet" href="css/Commodity_search.css" />
+		<link rel="stylesheet" href="css/mui.min.css" />
+
+		<script type="text/javascript" src="js/flexible.js" ></script>
+
+		
+	</head>
+	<body>
+		<div class="page" id="search">
+			<header class="head">
+				<div class="head_top">
+					<div class="top_1"  onclick="javascript:history.go(-1);"><a class="top_a1"><img class="top_img1"  src="images/goback-a.png" /></a></div>
+					<div class="top_2 search">
+						<div class="search_img"><img  src="images/Magnifier.png" width="25px" height="25px"/></div>
+						<input class="search_sr" v-model="search_sr"  type="text" value="" placeholder="积分少换礼品1:1" onfocus="this.placeholder=''" onblur="this.placeholder='积分少换礼品1:1'"/>
+					    <div class="txt_menu">
+					    	<span class="t_a" @click="type_click">礼品</span>
+					    	|
+					    	<span class="t_b" @click="type_click">商品</span>
+					    </div>
+					</div>
+					<div class="top_3" @click="search_click"><a class="top_a2" style="color: white;">搜索</a></div>
+				</div>
+			</header>
+			
+			<section style="height: 1.066rem;">
+				<div class="search_nav">
+				<div class="nav_1 flex_center">
+					综合
+				</div>
+				<div class="nav_2 flex_center">
+					销量<div class="nav_sj flex_center">
+						<div class="img_groupa" id="box_i">
+							<img  src="images/goup-b.png" class="goupa" id="goc"  @click="gc_click"/>
+						</div>
+						<div class="img_groupb">
+							<img  src="images/godown-a.png" class="goup" id="god" @click="gd_click"/>
+						</div>
+					   </div>
+				</div>
+				
+				<div class="nav_3 flex_center" >
+					价格<div class="nav_sj flex_center">
+							<div class="img_groupa">
+							<img  src="images/goup-a.png" class="godowna" id="gob"  @click="ga_click"/>
+						</div>
+						<div class="img_groupb">
+							<img  src="images/godown-b.png" class="goup" id="goa"  @click="gb_click"/>
+						</div>
+					   </div>
+				</div>
+				</div>
+			</section>
+			
+<section>
+	<div style="display:none">{{num}}</div>
+	<div  class="nav_pro" v-for="items in arr">
+
+		<div class="pro_img">
+			<img :src="'http://ddpointmall.wiwipu.com'+items.cover_img" class="img_p" />
+		</div>
+		<div class="pro_info">
+			<div class="pro_txt">
+				<p class="pro_p">{{items.goods_name}}</p>
+				<p class="sale_num">{{items.sale_num}}</p>
+			</div>
+			<div class="bottom_info">
+				<div class="pro_price flex_center">
+					<img src="images/gold.png" /><label class="price_num">{{items.shop_price}}</label>
+				</div>
+				<img src="images/shoppingcart.png" height="35px" width="35px" style="margin-right: 0.333rem;" />
+			</div>
+		</div>
+
+	</div>
+</section>
+<!--底部跳转-->
+			<div class="f_h">
+			<div class="footer_content" id="footer">
+                <div class="footer_flex " onclick="window.location.href='index.html'">
+					<img  src="images/shortcut-01b.png" alt="" class="img" />
+					<span> 好礼推荐</span>
+				</div>
+				<div class="footer_flex  num" onclick="window.location.href='selected_gift.html'">
+					<span class="buy_num"  >{{nums}}</span>
+					<img  src="images/shortcut-02b.png" alt="" class="img" />
+					<span> 已选礼品</span>
+				</div>
+				<div class="footer_flex "  onclick="window.location.href='index_yx.html'">
+					<img  src="images/shortcut-03a.png" alt="" class="img" />
+					<span style="color:#dd1474;"> 优选生活</span>
+				</div>
+				<div class="footer_flex " onclick="window.location.href='personal_center.html'" >
+					<img  src="images/shortcut-04b.png" alt="" class="img" />
+					<span> 个人中心</span>
+				</div>
+			</div>
+            </div>
+		</div>
+	</body>
+	<script src="js/token.js" ></script>
+	<script src="js/mui.min.js"></script>
+	<script src="js/axios.min.js" ></script>
+	<script src="js/vue.js"></script>
+	<script src="js/Commodity_search.js"></script>
+</html>

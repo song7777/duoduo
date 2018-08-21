@@ -1,0 +1,61 @@
+.yollon_page{
+	height: 3.666rem;
+	padding: 0 0.266rem;
+}
+.yollon_top{
+	height: 100%;
+	box-sizing: border-box;
+	padding:0 20px;
+	border-bottom: 0.013rem solid #C5C5C5;
+}
+.top_content{
+	margin-top: 0.8rem;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 0.2rem;
+}
+.yollon_content{
+	display: flex;
+	box-sizing: border-box;
+	padding: 0 0.466rem;
+	margin-top: 0.6rem;
+}
+.yollon_img{
+	text-align: right;
+	margin-right: 0.6rem;
+	width: 2.266rem;
+}
+.yollon_txt{
+	margin-top: 0.466rem;
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+}
+.acount_p_txt{
+	margin-top: 0.133rem;
+}
+.acount_txt1{
+	margin-right: 0.133rem;
+	margin-left: 0.133rem;
+}
+.yollon_gou{
+	text-align: center;
+	width: 2.133rem;
+	height:2.133rem ;
+	line-height: 2.133rem;
+}
+.yollon_btm{
+	font-size: 0.333rem;
+	box-sizing: border-box;
+	padding: 0 0.2rem;
+	margin-top: 0.733rem;
+}
+.yol_p_txt{
+	margin-top: 0.666rem;
+	margin-bottom: 1.546rem;
+	line-height: 1.5;
+}
+.bot_img{
+	text-align: center;
+}

@@ -1,0 +1,99 @@
+.beijing{
+	width: 100vw;
+	height: 100vh;
+	background: rgba(1,1,1,0.5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.commodity{
+	width: 8.33rem;
+	height: 11.66rem;
+	background: #FFFFFF;
+	margin-top: 1.8rem;
+	border-radius:0.4rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow: hidden;
+}
+.commodity_img{
+	width: 100%;
+	height: 7.38rem;
+}
+.commodity_ziliao{
+	width: 7.53rem;
+	height: 1.2rem;
+	display: flex;
+	flex-direction: column;
+	margin-top: 0.53rem;
+}
+.commodity_name{
+	width: 3.8rem;
+	height: 0.35rem;
+	font-size: 0.32rem;
+	color: #5d5d5b;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+
+.commodity_Price{
+	margin-top:0.36rem ;
+	width: 100%;
+	height: 0.46rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.commodity_Price_1{
+	display: flex;
+}
+.Price{
+	font-size: 0.34rem;
+	color: #c72c4e;
+}
+.Coupon{
+	width: 1.01rem;
+	height: 0.36rem;
+	background: url(../images/coupon-1.png) no-repeat;
+	background-size: 100% 100%;
+	margin-left: 0.17rem;
+	padding-left: 0.34rem;
+	box-sizing: border-box;
+	text-align: center;
+	font-size: 0.22rem;
+	color: #bc3253;
+}
+.commodity_Price_2{
+	display: flex;
+}
+.like{
+	width: 0.46rem;
+	height: 0.4rem;
+	margin-right: 0.4rem;
+}
+.share{
+	width: 0.46rem;
+	height: 0.4rem;
+}
+.immediately{
+	width: 4.02rem;
+	height: 0.77rem;
+	border-radius:0.16rem;
+	margin-top: 0.22rem;
+	background: url(../images/botton-1.png) no-repeat;
+	background-size: 100% 100%;
+	box-shadow: none;
+	border: 0;
+	font-size: 0.26rem;
+	color: #ffedfa;
+}
+.delete{
+	width: 0.8rem;
+	height: 0.86rem;
+	margin-top: 0.8rem;
+}

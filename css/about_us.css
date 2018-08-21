@@ -1,0 +1,45 @@
+
+.au-content{
+	width: 100%;
+	height: 5.24rem;
+	box-sizing: border-box;
+	padding: 0 0.42rem;
+	flex-direction: column;
+	margin-bottom: 0.26rem;
+}
+.au-content-title{
+	font: 0.34rem/1 "微软雅黑";
+	margin: 0.66rem 0;
+}
+.au-content .au-text{
+	width: 100%;
+	font: 0.34rem/1 "微软雅黑";
+	text-indent: 0.46rem;
+}
+.au-content .text1{
+	margin-bottom: 0.24rem;
+}
+.au-content .text2{
+	line-height: 2;
+}
+.au-opinion{
+	width: 100%;
+    flex: 1;
+	box-sizing: border-box;
+	padding: 0.85rem 0.32rem 0;
+}
+.au-opinion-title{
+	font-size: 0.34rem;
+}
+.au-opinion-con{
+	font-size: 0.26rem;
+	width: 100%;
+	resize: none;
+	border: 0;
+	border-bottom: 1px solid #969495;
+	margin-top: 0.93rem;
+	text-indent: 0.4rem;
+}
+.au-opinion-con::placeholder{
+	color: #969495;
+}

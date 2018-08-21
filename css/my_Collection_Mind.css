@@ -1,0 +1,73 @@
+.trunk{
+	
+}
+.collection_nav{
+	width: 100%;
+	height: 1.09rem;
+	background: #e2e2e0;
+	display: flex;
+}
+.collection_nav{
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.collection_a{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 2rem;
+	height: 100%;
+	font-size: 0.29rem;
+	color: #605f5d;
+	box-sizing: border-box;
+}
+.collection_a_red{
+	color:#c42d50;
+	border-bottom: 0.05rem solid #c42d50;
+}
+.mind_shop{
+	width: 100%;
+	height: 3.06rem;
+	border-bottom: 0.04rem solid #dededc;
+	padding: 0.5rem 0.5rem 0.33rem 0.45rem;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+}
+.mind_img{
+	width: 2.13rem;
+	height: 2.13rem;
+}
+.mind_zong{
+	flex: 1;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.mind_name{
+	width:3.86rem; 
+	white-space:nowrap; 
+	text-overflow:ellipsis; 
+	overflow:hidden;
+	margin-left: 0.33rem;
+}
+.mind_Price{
+	display: flex;
+	margin-left: 0.33rem;
+}
+.jinbi{
+	width: 0.4rem;
+	height: 0.4rem;
+}
+.Price_number{
+	font-size: 0.26rem;
+	color: #b13652;
+	margin-left: 0.13rem;
+}
+.delete{
+	width: 0.5rem;
+	height: 0.5rem;
+}

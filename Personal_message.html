@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>个人消息</title>
+		<link rel="stylesheet" href="css/public_style.css" />
+		<link rel="stylesheet" href="css/Personal_message.css"/>
+		<script src="js/flexible.js" ></script>
+	</head>
+	<body>
+		<!--page包裹整个页面的div-->
+		<div class="page" id="anniu">
+			<!--头部公共样式开始-->
+			
+			<header class="head">
+				<div class="head_top">
+					<!--top_1头部左边第一个图标 可以换img属性改变图标形状-->
+					<div class="top_1"><a class="top_a1" onclick="javascript:history.go(-1)"><img class="top_img1" src="images/goback-a.png" /></a></div>
+					<!--top_2头部文字，替换文字即可！-->
+					<div class="top_2">个人消息</div>
+					<!--top_3头部右边第一个图标 可以换img属性改变图标形状 有文字替换文字，没有文字的删除文字即可-->
+					<div class="top_3"><a class="top_a2"><img class="top_img2" src="images/registcenter.png" /></a></div>
+				</div>
+			</header>
+			<!--头部公共样式结束-->
+			<!-- 中间部分开始 -->
+			<section class="personal_box">
+				<!-- ID栏开始 -->
+				<div class="message_box">
+					<p class="message_ncm">ID :</p>
+					<p class="message_nc">530</p>
+				</div>
+				<!-- ID栏结束 -->
+				<!-- 头像栏开始 -->
+				<div class="tx_box">
+					<p class="gxtx">个性头像 :</p>
+					<div class="tx_box_tp">
+					<div class="Evaluation_picture" >
+						<div class="picture_img" id="ccc">
+							<label for="xdaTanFileImg" id="bbb">
+								<img class="Add_pictures" src="images/addpic.png" />
+							</label>
+							<input type="file" id="xdaTanFileImg" class="aaa"  name="images[]" onchange="xmTanUploadImg(this)"/>
+						</div>
+					</div>
+				</div>	
+				</div>
+				<!-- 头像栏结束 -->
+				<!-- 昵称栏开始 -->
+				<div class="nc_box" id="name" id="nickname">
+					<p class="nicknames">昵称 :</p>
+					<input type="text" class="nick_names" placeholder="昵称" v-model="nickname">
+				</div>
+				<!-- 昵称栏结束 -->
+				<!-- 性别栏开始 -->
+				<div class="xb_box">
+					<!-- 性别 -->
+					<div>
+						<p class="xb">性别 :</p>	
+					</div>
+					<!-- 单选框 -->
+					<div class="danxuan">
+						<div class="">
+							<input id="nan1" class="nan" name="sex" checked="checked" v-model="sex"/>
+							<label for="nan1"><img src="images/select-b.png" class="man"/></label>
+							<span>男</span>
+						</div>
+						<div class="">
+							<input id="nv1" class="nv" name="sex" v-model="sex"/>
+							<label for="nv1"><img src="images/select-a.png" class="man"/></label>
+							<span>女</span>
+						</div>
+					</div>
+				</div>
+				<!-- 性别栏结束 -->
+				
+			</section>
+			
+			<!-- 中间部分结束 -->
+			<!--底部公共样式开始-->
+			<div class="foot">
+				<button class="foot_1" @click="annis">保存信息</button>
+			</div>
+			<!--底部公共样式结束-->
+		</div>
+	</body>
+	<script src="js/axios.min.js"></script>
+	<script src="js/vue.min.js"></script>
+	<script src="js/token.js"></script>
+	<script src="js/personal_message.js"></script>
+</html>

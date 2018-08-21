@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>消息中心</title>
+		<link rel="stylesheet" href="css/public_style.css" />
+		<link rel="stylesheet"  href="css/message.css"/>
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+		<link rel="stylesheet" href="css/mui.min.css" />
+		<script type="text/javascript" src="js/flexible.js" ></script>
+	
+	</head>
+	<body>
+		<!--page包裹整个页面的div-->
+		<div class="page">
+			<!--头部公共样式开始-->
+			<header class="head">
+				<div class="head_top">
+					<!--top_1头部左边第一个图标 可以换img属性改变图标形状-->
+					<div class="top_1"><a class="top_a1" onclick="javascript:window.history.back(-1);"><img class="top_img1" src="images/goback-a.png" /></a></div>
+					<!--top_2头部文字，替换文字即可！-->
+					<div class="top_2">消息中心</div>
+					<!--top_3头部右边第一个图标 可以换img属性改变图标形状 有文字替换文字，没有文字的删除文字即可-->
+					<div class="top_3"></div>
+				</div>
+			</header>
+			<!--头部公共样式结束-->
+			<!--消息开始-->
+			<section class="message" id="messages">
+				<!--<div class="message_content" v-for="(mess,index) in reitem" :key='index' >
+					<h2 class="message_title" v-text="reitem[index].type"></h2>
+					<p class="message_time" v-text="reitem[index].createtime"></p>
+					<p class="message_info" v-text="reitem[index].content"></p>
+					
+				</div>-->
+				<div class="message_content" v-for="(mess,index) in reitem" :key='index' >
+					<h2 class="message_title" v-text="reitem[index].type"></h2>
+					<p class="message_time" v-text="reitem[index].createtime"></p>
+					<p class="message_info" v-text="reitem[index].content"></p>
+					
+				</div>
+				
+			</section>
+			<!--消息结束-->
+			
+			<!--底部选项卡公共样式开始-->
+			<footer class="footer" id="footer">
+				<!--foot_1底部提交按钮替换文字即可-->
+				<div class="footer_content">
+					<div class="footer_flex ">
+						<img src="images/shortcut-01a.png" alt="" class="img"/>
+						<span> 好礼推荐</span>
+					</div>
+					<div  class="footer_flex "  onclick="window.location.href='selected_gift.html'" > 
+						<span class="buy_num"  >{{nums}}</span>
+						<img src="images/shortcut-02b.png" alt=""  class="img"/>
+						<span> 已选礼品</span>
+					</div>
+					<div  class="footer_flex " onclick="window.location.href='index_yx.html'">
+						<img src="images/shortcut-03b.png" alt=""  class="img"/>
+						<span> 优选生活</span>
+					</div>
+					<div  class="footer_flex " @click="usercenter">
+						<img src="images/shortcut-04b.png" alt="" class="img"/>
+						<span> 个人中心</span>
+					</div>
+				</div>
+				<div class="tanchuang" id="tan" v-html="tan">	</div>
+			</footer>
+			
+			<!--底部公共样式结束-->
+		</div>
+	</body>
+	<script src="js/vue.js"></script>
+	<script src="js/jquery-3.3.1.js"></script>
+	<script src="js/axios.min.js"></script>
+	<script src="js/token.js"></script>
+	<script src="js/axios.min.js"></script>
+	<script src="js/message.js"></script>
+	<script src="js/public.js"></script>
+	<script src="js/mui.min.js"></script>
+</html>

@@ -1,0 +1,92 @@
+.trunk{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.integral{
+	width: 100%;
+	height: 2rem;
+	background: #dededc;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.integral_div{
+	flex: 1;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.huisetiao{
+	width: 0.02rem;
+	height: 1.4rem;
+	background: #d2d2d2;
+}
+.consumption{
+	width: 2.45rem;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #615d5c;
+}
+.consumption_shu{
+	font-size: 0.53rem;
+}
+.consumption_zi{
+	font-size: 0.3rem;
+}
+.consumption_red{
+	width: 2.45rem;
+	color: #dc214c;
+	border-bottom: 0.08rem solid #dc214c;
+	box-sizing: border-box;
+}
+.Detailed{
+	width: 100%;
+	height: 1.22rem;
+	padding: 0.66rem 0.82rem 0 0.82rem;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.shuipinghuitiao{
+	width: 2.98rem;
+	height: 0.02rem;
+	background: #c1c1c1;
+}
+.Detailed_zi{
+	font-size: 0.29rem;
+	color: #605c5b;
+}
+.expense{
+	width: 9.44rem;
+	height: 1.62rem;
+	display: flex;
+	border-bottom: 0.02rem solid #e6e6e6;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.expense_left_zi{
+	font-size: 0.3rem;
+	color: #282320;
+}
+.expense_left_time{
+	font-size: 0.28rem;
+	color: #969593;
+}
+.expense_right{
+	height: 100%;
+	padding-top: 0.93rem;
+	padding-right: 0.16rem;
+	box-sizing: border-box;
+	font-size: 0.4rem;
+	color: #dd224d;
+}
+.expense_right_green{
+	color: #1f8148;
+}

@@ -1,0 +1,142 @@
+.head_top{
+	z-index: 999;
+}
+.trunk{
+	position: relative;
+	width: 100%;
+	flex: 1;
+}
+.Sidebar_nav_left{
+	width: 20%;
+	height:100% ;
+	background: #dededc;
+	position: fixed;
+    top: 1.773333rem;
+	bottom:0;
+	left: 0;
+}
+.Sidebar_left_ul{
+	width: 100%;
+	height: 100%;
+}
+.Sidebar_left_li{
+	width: 100%;
+	height: 1.01rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.Sidebar_left_li:hover{
+	border-top: 0.06rem solid #71706e;
+	border-bottom:0.06rem solid #dc214c ;
+	background: #FFFFFF;
+}
+.left_li_p{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 0.29rem;
+	color: #5f5e5c;
+}
+.Sidebar_nav_right{
+	width: 80%;
+	background: #FFFFFF;
+	position: absolute;
+	top: 0;
+	bottom:0;
+	right: 0;
+	padding: 0.18rem 0.13rem 0 0.13rem;
+	box-sizing: border-box;
+}
+.swiper-container{
+	width: 100%;
+	height: 1.7rem;
+}
+.Advertisement_img{
+	width: 100%;
+	height: 1.7rem;
+}
+.commodity_ul{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	padding-bottom: 1.173333rem;
+	box-sizing: border-box;
+}
+.commodity_li{
+	width: 33.33%;
+	height: 3.86rem;
+}
+.commodity_div{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	padding-top:0.17rem ;
+	box-sizing: border-box;
+}
+.commodity_img1{
+	width: 2.48rem;
+	height: 2.08rem;
+}
+.commodity_p1{
+	text-align: center;
+	width: 1.8rem;
+	font-size: 0.25rem;
+	color: #615d5c;
+	margin-top: 0.22rem;
+	 text-overflow: ellipsis;
+    display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+    -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+    -webkit-line-clamp: 2; /** 显示的行数 **/
+    overflow: hidden;  /** 隐藏超出的内容 **/
+}
+.commodity_p2{
+	font-size: 0.2rem;
+	color: #b23652;
+	margin-top: 0.25rem;
+}
+.Discount{
+	width: 1.02rem;
+	height: 0.36rem;
+	background: url(../images/coupon-1.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	top: 2.06rem;
+	padding-left: 0.4rem;
+	box-sizing: border-box;
+	font-size: 0.22rem;
+	color: #af3753;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+.Set_top{
+	width: 1.17rem;
+	height: 1.17rem;
+	position: fixed;
+	border-radius: 50%;
+	bottom: 1.66rem;
+	right: 0.46rem;
+}
+.Set_top_img{
+	width: 1.17rem;
+	height: 1.17rem;
+}
+.footer_flex .buy_num{
+	width: 0.333333rem;
+	height: 0.333333rem;
+	background: #dd234c;
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left:1.45rem;
+	text-align: center;
+	line-height: 0.333333rem;
+	color: #FFFFFF;
+	font-size: 0.186666rem;
+}

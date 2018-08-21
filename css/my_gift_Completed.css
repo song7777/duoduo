@@ -1,0 +1,197 @@
+.trunk{
+	width: 100%;
+	height: 1.06rem;
+	background: #e2e2e0;
+	
+}
+.gift_ul{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	background: #e2e2e0;
+}
+.gift_list{
+	flex: 1;
+	font-size: 0.29rem;
+	color: #615d5c;
+}
+.gift_list_red{
+	color: #de204c;
+	border-bottom: 0.02rem solid #de204c;
+}
+.gift_a{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #615d5c;
+}
+.gift_a_red{
+	color: #de204c;
+}
+.Commodity_details{
+	width: 100%;
+	border-bottom: 0.13rem solid #dededc;
+	background: #FFFFFF;
+}
+.shop_top{
+	width: 100%;
+	height: 1.01rem;
+	display: flex;
+	justify-content: space-between;
+	font-size: 0.29rem;
+	color: #5f5e5c;
+}
+.order_number{
+	margin-top: 0.53rem;
+	margin-left: 0.33rem;
+	letter-spacing: 0.05rem;
+}
+.shop_state{
+	margin-top: 0.53rem;
+	margin-right: 0.33rem;
+	letter-spacing: 0.05rem;
+}
+.shop_body{
+	width: 100%;
+	padding: 0.24rem 0;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+}
+.shop_num{
+	display: flex;
+}
+.shop_t{
+	display: flex;
+	width: 2.2rem;
+	height: 2.2rem;
+	margin-left: 0.54rem;
+}
+.shop_img{
+	width: 2.2rem;
+	height: 2.2rem;
+}
+.shop_details{
+	flex: 1;
+}
+.details_name{
+	width:3.86rem; 
+	white-space:nowrap; 
+	text-overflow:ellipsis; 
+	overflow:hidden;
+	margin-left: 0.33rem;
+}
+.details_introduce{
+	width: 100%;
+	height: 1.46rem;
+	padding-left: 0.33rem;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.details_introduce1{
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+.clock{
+	width: 0.5rem;
+	height: 0.5rem;
+}
+.clock_img{
+	width: 0.5rem;
+	height: 0.5rem;
+}
+.shop_information{
+	font-size: 0.24rem;
+	color: #70706e;
+}
+.Arrow{
+	width: 0.33rem;
+	height: 0.4rem;
+	margin-right: 0.6rem;
+}
+.Arrow_img{
+	width: 0.33rem;
+	height: 0.4rem;
+}
+.coin{
+	width: 100%;
+	height: 0.73rem;
+	padding-left: 0.33rem;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+}
+.Purchase_quantity{
+	display: flex;
+	align-items: center;
+}
+.Price_number{
+	font-size: 0.24rem;
+	color: #838381;
+}
+.shu{
+	font-size: 0.2rem;
+	color: #1a1613;
+	margin-left: 0.33rem;
+}
+.coin1{
+	height: 0.34rem;
+	width: 0.34rem;
+}
+.coin2{
+	height: 0.34rem;
+	width: 0.34rem;
+}
+.Price{
+	display: flex;
+	align-items: center;
+	margin-right: 0.4rem;
+}
+.total{
+	width: 100%;
+	height: 0.53rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.total_p{
+	font-size: 0.32rem;
+	color: #625e5d;
+}
+.Submission{
+	 width: 100%;
+    height: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.Prompt{
+	font-size: 0.25rem;
+	color: #989795;
+	margin-right: 1rem;
+}
+.order_button1{
+	width: 1.86rem;
+	height: 0.76rem;
+	border: 0.04rem solid #615d5c;
+	border-radius: 0.2rem;
+	background: #FFFFFF;
+	font-size: 0.29rem;
+	color: #5f5e5c;
+}
+.order_button2{
+	width: 1.86rem;
+	height: 0.76rem;
+	margin-right: 0.16rem;
+	border: 0.04rem solid #ca2a50;
+	border-radius: 0.2rem;
+	background: #FFFFFF;
+	font-size: 0.29rem;
+	color: #ca2a50;
+}

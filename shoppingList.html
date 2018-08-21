@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>我的购物单</title>
+		<link rel="stylesheet" href="css/public_style.css" />
+		<link rel="stylesheet" type="text/css" href="css/shoppingList.css"/>
+		<link rel="stylesheet" href="css/mui.min.css" />
+		<script type="text/javascript" src="js/flexible.js" ></script>
+	
+	</head>
+	<body>
+		<!--page包裹整个页面的div-->
+		<div class="page">
+			<!--头部公共样式开始-->
+			<header class="head">
+				<div class="head_top">
+					<!--top_1头部左边第一个图标 可以换img属性改变图标形状-->
+					<div class="top_1"><a class="top_a1" onclick="javascript:window.history.back(-1);"><img class="top_img1" src="images/goback-a.png" /></a></div>
+					<!--top_2头部文字，替换文字即可！-->
+					<div class="top_2">我的购物单</div>
+					<!--top_3头部右边第一个图标 可以换img属性改变图标形状 有文字替换文字，没有文字的删除文字即可-->
+					<div class="top_3"><a class="top_a2" href="personal_center.html"><img class="top_img2" src="images/registcenter.png" /></a></div>
+				</div>
+			</header>
+			<!--头部公共样式结束-->
+			<!--banner-->
+			<section class="banner" >
+				<div class="banner_content">
+					<img src="images/advert-02.png" alt=""  class="banner_img"/>
+				</div>
+			</section>
+			<!--end banner-->
+			<!--选项卡开始-->
+			<div id="table">
+			<section class="tab">
+				<div class="tab_content">
+					<ul class="tab_lists">
+						<li class="list" >待赠送</li>
+						<li class="list" >已赠送</li>
+						<li class="list active">所有</li>
+					</ul>
+				</div>
+			</section>	
+			<!--选项卡结束-->
+			<!--选项卡详情开始-->
+			<!--待赠积分-->
+				<div class="type hide " id="thridpage">
+				<section class="goodsIntegral"  v-for="(goods,index) in item" @click="singleSelect(goods, index)"   :name="goods.id">
+					<div class="goodsIntegral_content">
+						<div class="choice">
+							<!--<img src="images/select-a.png" alt="" class="check"/>-->
+							<input type="checkbox" :checked="goods.checked" />
+							<div class="goodsIntegral_num">
+								<span class="num_title">订单编号:</span>
+								<span v-text="goods.shoplist_sn"></span>
+							</div>
+						</div>
+						<div class="integral">
+							<div class="integral_content">
+								<span class="integral_num integral_wait" v-text="goods.status"></span>
+							</div>
+							<p class="integral_info">经本平台推荐商品才得积分</p>
+						</div>
+					</div>
+				</section>
+				<div class="foot_1">
+					<div class="select">
+							<span  @click="allSelect(item)">
+							 <input type="checkbox" :checked="isAllSelected"/>
+							<span class="checkAll" >全选</span>
+							</span>
+							<span class="deleteAll" @click="isDelete" >删除</span>
+					</div>
+					<div class="add">添加购物订单</div>
+				</div>
+			</div>	
+			
+			<!--待赠积分结束-->
+			
+			<!--已赠积分-->
+		
+			<div class="type hide" id="secondPage">
+				<section class="goodsIntegral"  v-for="(goods,index) in item" @click="singleSelect(goods, index)"  :name="goods.id" >
+					<div class="goodsIntegral_content">
+						
+						<div class="choice">
+							<!--<img src="images/select-a.png" alt="" class="check"/>-->
+							<input type="checkbox" :checked="goods.checked"  />
+							<div class="goodsIntegral_num">
+								<span class="num_title">订单编号:</span>
+								<span  v-text="goods.shoplist_sn"></span>
+							</div>
+						</div>
+						<div class="integral">
+							<div class="integral_content">
+								<span v-text="goods.status"></span>
+								<span class="integral_num"  v-text="goods.obtain_points"></span>
+							</div>
+							<p >{{goods.submit_time | convTime}}</p>
+						</div>
+					</div>
+				</section>
+				<div class="foot_1">
+					<div class="select">
+							<span  @click="allSelect(item)">
+							 <input type="checkbox" :checked="isAllSelected"/>
+							<span class="checkAll" >全选</span>
+							</span>
+							<span class="deleteAll" @click="isDelete" >删除</span>
+					</div>
+					<div class="add">添加购物订单</div>
+				</div>
+			</div>	
+			<!--已赠积分结束-->
+			
+			<!--所有-->
+			<div class="type show " id="fristPage">
+				<!--<section class="goodsIntegral" v-for="(goods,index) in item" :key="goods.index" @click="singleSelect(goods, index)">-->
+				<section class="goodsIntegral" v-for="(goods,index) in item" :key="goods.index" @click="singleSelect(goods, index)" :name="goods.id">
+					<div class="goodsIntegral_content">
+						
+						<div class="choice" >
+							<input type="checkbox" :checked="goods.checked"  />
+							<div class="goodsIntegral_num">
+								<span class="num_title">订单编号:</span>
+								<span v-text="goods.shoplist_sn"></span>
+							</div>
+						</div>
+						<div class="integral">
+							<div class="integral_content">
+								<span v-text="goods.status"></span>
+								<span class="integral_num"  v-text="goods.obtain_points"></span>
+							</div>
+							<p>{{goods.submit_time | convTime}}</p>
+						</div>
+					</div>
+					
+				</section>
+						<div class="foot_1">
+							<div class="select">
+								<span  @click="allSelect(item)">
+								 <input type="checkbox" :checked="isAllSelected"/>
+								<span class="checkAll" >全选</span>
+								</span>
+								<span class="deleteAll" @click="isDelete" >删除</span>
+							</div>
+							<div class="add">添加购物订单</div>
+						</div>
+			</div>	
+			<!--所有-->
+			</div>
+			<!--选项卡详情结束-->
+			<!--底部提示开始-->
+			<section class="capion">
+				<div class="capion_content" >
+					<p class="capion_info">如果订单号填写错误，请删除重新添加</p>
+				</div>
+			</section>
+			<!--底部提示结束-->
+		
+		</div>
+		<!--弹窗-->
+		<section class="dialog" id="addshoplist">
+			<div class="dialog_content">
+				<div class="order_dialog">
+					<img src="images/advert-03.png" alt="" class="dialog_img"/>
+					<input type="text" name="" id="" placeholder="请输入淘宝/天猫平台订单号" class="input" v-model="shoplist"/>
+					<span class="input_info">在淘宝或天猫APP的个人订单管理中，找到已付款商品订单详情，找到订单编号,并复制粘贴到以上输入框。</span>
+					<div class="sure" @click="sure_click">确认</div>
+					<div class="closed">
+						<img src="images/closed.png" alt=""  class="closed_img"/>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--弹窗结束-->
+		
+	</body>
+		<script src="js/shoppingList.js"></script>
+		<script src="js/vue.js"></script>
+		<script src="js/axios.min.js"></script>
+		<script src="js/token.js"></script>
+		<script src="js/vueshoppingList.js"></script>
+		<script src="js/mui.min.js"></script>
+</html>

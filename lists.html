@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>分类</title>
+		<link rel="stylesheet" href="css/public_style.css" />
+		<link rel="stylesheet" href="css/lists.css" />
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper-4.3.3.min.css"/>
+		<script type="text/javascript" src="js/flexible.js" ></script>
+	</head>
+	<body>
+		<!--page包裹整个页面的div-->
+		<div class="page" >
+			<!--头部公共样式开始-->
+			<header class="head">
+				<div class="head_top">
+					<div class="logo flex_center">
+						<img src="images/logo-02.png"  class="logo_img" />
+					</div>
+					<div class="search" onclick="window.location.href='Commodity_search.html'">
+						<div class="search_input">积分少换礼品 1:1</div>
+					</div>
+					<div class="info">
+						<div class="classify flex_column">
+								<img src="images/classify.png" alt="" class="classify_img"/>分类
+						</div>
+							<div class="message flex_column" onclick="window.location.href='message.html'" id="message">
+								<img src="images/circular.png" alt="" class="circular"/>
+								<img src="images/message.png" class="message_img"/>消息
+							</div>
+					</div>
+				</div>
+			</header>
+			<!--头部公共样式结束-->
+			<!--分类列表-->
+			<div  id="lists">
+				<section class="lists">
+					<div class="lists_content">
+							<div class="swiper-container swiper-container3">
+								<div class="swiper-wrapper ">
+								    <div class="swiper-slide flex_center"  v-for="(list,index) in lis"  @click="look_click(index)" >
+										<p class="lists_title" >{{index}}</p>
+								    </div>
+								     
+								 </div>   
+					 		</div>	
+					 		
+					</div>
+				</section>
+
+	
+				<!--分类详情-->
+			<!--	<section class="goodsList mui-scroll-wrapper" id="scroll"  >
+					<div class="goodsList_content mui-scroll"  >
+						<div class="recommend_title" >
+							<span class="line"></span>
+	   						<span class="txt" >{{goodsName}}</span>
+	   						<span class="line"></span>
+						</div>
+						<div class="goods_details flex_center mui-table-view mui-table-view-chevron" >
+							<div class="goods_detail " v-for="(li,i) in goods"  @click="goods_click(li)" >
+									<img :src="'http://ddpointmall.wiwipu.com' + li.cover_img"  alt="" class="detail_img"/>
+									<p class="detail_title">{{li.goods_name}}</p>
+									<div class="detail_buy "> 
+										<div class="flex_center">
+											<img src="images/gold.png" alt="" class="detail_buy_img" />
+											<span>{{li.shop_price}}</span>
+										</div>
+										
+									</div>
+							</div>
+						</div>
+						
+						
+					</div>
+				</section>-->
+				<section class="goodsList mui-scroll-wrapper"  id="scroll" >
+					<div class="goodsList_content mui-scroll"  >
+						<div class="recommend_title" >
+							<span class="line"></span>
+	   						<span class="txt" >{{goodsName}}</span>
+	   						<span class="line"></span>
+						</div>
+						<div class="goods_details flex_center mui-table-view mui-table-view-chevron" >
+							<div class="goods_detail " v-for="(li,i) in goods"  @click="goods_click(li)" >
+									<img :src="'http://ddpointmall.wiwipu.com' + li.cover_img"  alt="" class="detail_img"/>
+									<p class="detail_title">{{li.goods_name}}</p>
+									<div class="detail_buy "> 
+										<div class="flex_center">
+											<img src="images/gold.png" alt="" class="detail_buy_img" />
+											<span>{{li.shop_price}}</span>
+										</div>
+										
+									</div>
+							</div>
+						</div>
+						
+						
+					</div>
+				</section>
+				<!--分类详情结束-->
+				
+			</div>
+			<!--分类列表结束-->
+			
+
+			<!--返回顶部-->
+			<!--<div class="gotop">-->
+				<img src="images/gotop.png" alt=""  class="gotop" />
+			<!--</div>-->
+			<!--返回顶部结束-->
+			<!--底部公共样式开始-->
+			<footer class="footer" id="footer">
+				<!--foot_1底部提交按钮替换文字即可-->
+				<div class="footer_content">
+					<div class="footer_flex "  onclick="window.location.href='index.html'">
+						<img src="images/shortcut-01a.png" alt="" class="img"/>
+						<span> 好礼推荐</span>
+					</div>
+					<div  class="footer_flex "  onclick="window.location.href='selected_gift.html'"> 
+						<span class="buy_num">{{nums}}</span>
+						<img src="images/shortcut-02b.png" alt=""  class="img"/>
+						<span> 已选礼品</span>
+					</div>
+					<div  class="footer_flex " onclick="window.location.href='index_yx.html'">
+						<img src="images/shortcut-03b.png" alt=""  class="img"/>
+						<span> 优选生活</span>
+					</div>
+					<div  class="footer_flex " @click="usercenter">
+						<img src="images/shortcut-04b.png" alt="" class="img"/>
+						<span> 个人中心</span>
+					</div>
+				</div>
+				<div class="tanchuang" id="tan" v-html="tan">	</div>
+			</footer>
+			
+			<!--底部公共样式结束-->
+			
+		</div>
+	</body>
+
+	<script src="js/jquery-3.3.1.js"></script>
+	<script src="js/vue.js"></script>
+	<script src="js/swiper-4.3.3.min.js"></script>
+	<script src="js/axios.min.js"></script>
+	<script src="js/token.js"></script>
+	<script src="js/lists.js"></script>
+	<script src="js/public.js"></script>
+	<script src="js/mui.min.js"></script>
+	<script>
+		mui.init({
+		    pullRefresh : {
+		        container:"#scroll",//待刷新区域标识，querySelector能定位的css选择器均可，比如：id、.class等
+		        up : {
+		            height:100,// 可选.默认50.触发上拉加载拖动距离
+		            auto:false,// 可选,默认false.自动上拉加载一次
+		            contentrefresh : "正在加载...",// 可选，正在加载状态时，上拉加载控件上显示的标题内容
+		            contentnomore:'没有更多数据了',// 可选，请求完毕若没有更多数据时显示的提醒内容；
+		            callback : function() {
+//		                var self = this; // 这里的this == mui('#refreshContainer').pullRefresh()
+		                // 加载更多的内容
+		                loadMore(this);
+					            } //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+					        }
+					    }
+					});
+					page:{
+						page=2
+					};
+		mui("#scroll").on('tap', '.goods_detail', function (event) {
+			this.click();
+			});
+
+
+		</script>
+</html>

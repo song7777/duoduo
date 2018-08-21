@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>订单确认</title>
+		<link rel="stylesheet" href="css/public_style.css" />
+		<link rel="stylesheet" type="text/css" href="css/orderConfirmation.css" />
+		<link rel="stylesheet" href="css/mui.min.css" />
+		<script type="text/javascript" src="js/flexible.js"></script>
+	
+	</head>
+
+	<body>
+		<!--page包裹整个页面的div-->
+		<div class="page">
+			<!--头部公共样式开始-->
+			<header class="head">
+				<div class="head_top">
+					<!--top_1头部左边第一个图标 可以换img属性改变图标形状-->
+					<div class="top_1">
+						<a class="top_a1" onclick="javascript:window.history.back(-1);"><img class="top_img1" src="images/goback-a.png" /></a>
+					</div>
+					<!--top_2头部文字，替换文字即可！-->
+					<div class="top_2">订单确认</div>
+					<!--top_3头部右边第一个图标 可以换img属性改变图标形状 有文字替换文字，没有文字的删除文字即可-->
+					<div class="top_3"></div>
+				</div>
+			</header>
+			<!--头部公共样式结束-->
+			<!--地址修改-->
+			<section class="address" id="address" >
+				<div class="address_content" >
+					<div class="address_info">
+						<span>收货信息:</span>
+						<ul class="info">
+							<li>{{items.area}}</li>
+							<li>{{items.detail_address}}</li>
+							<li>{{items.mobile}} <span>{{items.consignee}}</span></li>
+						</ul>
+					</div>
+					<span class="address_edit" onclick="window.location.href='Receiving_address.html'">修改收货地址</span>
+
+				</div>
+					<img src="images/mail-c.png" alt="" class="address_btm"/>					
+				
+			</section>
+			<!--地址修改结束-->
+			<!--商品详情-->
+			<div id="goods">
+				<section class="goods">
+					<div class="goods_content">
+						<div class="goods_list" v-for="(good,index) in lists" :key='good.index'>
+							<div class="goods_info">
+								<img :src="'http://ddpointmall.wiwipu.com' + list[index].cover_img" alt="" class="goods_img" />
+								<ul>
+
+									<li class="goods_title">{{list[index].goods_name}}</li>
+									<li class="goods_type">{{list[index].spec_2}}<span class="goods_size">{{list[index].spec_3}}</span></li>
+									<li><img src="images/gold.png" alt="" class="gold" /><span class="goods_price price">{{list[index].price}}</span><span class="goods_count">x{{list[index].num}}</span></li>
+								</ul>
+							</div>
+							<div class="goods_return">
+								<img src="images/gonext.png" alt="" class="gonext" />
+								<div>
+									<img src="images/gold.png" alt="" class="gold" />
+									<span class="price">{{list[index].price*list[index].num}}</span>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</section>
+
+				<!--商品详情结束-->
+				
+				<section class="count">
+					<div class="count_content" >
+						<div>
+							<span class="goods_prices">商品金额:</span>
+							<img src="images/gold.png" alt="" class="gold" />
+							<span class="price">{{list.amount}}</span>
+						</div>
+						<div>
+							<span class="expressage">积分换礼需额外支付快递费用:</span>
+							<span class="price">￥{{list.price}}</span>
+						</div>
+					</div>
+				</section>
+			</div>
+			<!--商品计算结束-->
+
+			<!--底部公共样式开始-->
+			<footer class="foot">
+				<!--foot_1底部提交按钮替换文字即可-->
+				<a><button class="foot_1" id="payment" @click="payment">确认提交</button></a>
+			</footer>
+			<!--底部公共样式结束-->
+		</div>
+	</body>
+	<script src="js/vue.js"></script>
+	<script src="js/token.js"></script>
+	<script src="js/axios.min.js"></script>
+	<script src="js/orderConfirmation.js"></script>
+	<script src="js/mui.min.js"></script>
+
+</html>

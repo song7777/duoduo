@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/public_style.css" />
+		<link rel="stylesheet" href="css/mui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+		<link rel="stylesheet" type="text/css" href="css/personal_center.css"/>
+		<script type="text/javascript" src="js/flexible.js" ></script>
+		<title>个人中心</title>
+	</head>
+	<body>
+		<!--page包裹整个页面的div-->
+		<div class="page">
+			<!--头部公共样式开始-->
+			<header class="head" id="xiaoxi">
+				<div class="head_top">
+					<!--top_1头部左边第一个图标 可以换img属性改变图标形状-->
+					<div class="top_1"><a class="top_a1" href="index.html"><img class="top_img1" src="images/goback-a.png" /></a></div>
+					<!--top_2头部文字，替换文字即可！-->
+					<div class="top_2">个人中心</div>
+					<!--top_3头部右边第一个图标 可以换img属性改变图标形状 有文字替换文字，没有文字的删除文字即可-->
+					<div class="top_3">
+						<a class="top_a2"><img class="top_img2" src="images/message.png" @click="order"/></a>
+						<a class="top_a2"><img class="top_img3"/></a>
+					</div>
+				</div>
+			</header>
+			<!--头部公共样式结束-->
+			<!--个人信息部分开始-->
+			<section class="grzx_box">
+				<!--商城首页-->
+				<div class="sy" id="centre">
+				<!--商城首页-->
+					<p @click="home_page">商城首页</p>
+				<!--客户服务-->
+					<p @click="serve">客户服务</p>
+				</div>
+				<!--用户头像-->
+				<div class="yhtx"> 
+					<div class="yhtx_img1">      		<!-- 用户头像 -->
+						<div class="yhtx_img2"></div>	<!-- 微信背景 -->
+					</div>
+				</div>
+				<!--用户昵称-->
+				<div class="nc" id="nickname">
+					<p @click="nc">{{nickname}}</p>
+				</div>
+				<!--用户ID-->
+				<div id="mobile" class="nc_1" @click="nc">
+					<p>{{mobile}}</p>
+				</div>
+				<!--账户积分 可用余额 已收藏-->
+				<div id="personal_center" class="nav">
+					<div class="nav_1">
+						<ul class="nav_1_a">
+							<!--账户积分-->
+							<li class="zhjf" @click="jifen">
+								<p class="zh">{{points}}</p>
+								<p class="jf">账户积分</p>
+							</li>
+							<!--可用余额-->
+							<li class="kyye" @click="yuE">
+								<p class="ky">{{balance}}</p>
+								<p class="ye">可用余额</p>
+							</li>
+							<!--已收藏-->
+							<li class="ysc" @click="collect">
+								<p class="shuliang">{{collect_id}}</p>
+								<p class="sc">已收藏</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<!--个人信息部分开始-->
+			<!--兑换礼品 购物积分部分开始-->
+			<div class="grzx_box1">
+				<!--兑换礼品-->
+				<div class="lp" id="dizhi">
+					<p class="wdlp">我兑换的礼品</p>
+					<p class="dzgl" @click="manage">收货地址管理<img class="jt" src="images/gonext.png"/></p>
+				</div>
+				<!--待支付 待收货 已完成 待评价-->
+				<div class="lp_box" id="present">
+					<!--待支付-->
+					<div class="daizhifu" @click="unpaid">
+						<span class="daizhifu_num">{{lists_length3}}</span>
+						<img class="tb" src="images/personalunpaid.png"/>
+						<p class="describe">待支付</p>
+					</div>
+					<!--待收货-->
+					<div class="daishouhuo" @click="cargo">
+						<span class="daishouhuo_num">{{lists_length2}}</span>
+						<img class="tb" src="images/personaluncollected.png"/>
+						<p class="describe">待收货</p>
+					</div>
+					<!--已完成-->
+					<div class="yiwancheng" @click="done">
+						<span class="yiwancheng_num">{{lists_length}}</span>
+						<img class="tb" src="images/personalcompleted.png"/>
+						<p class="describe">已完成</p>
+					</div>
+					<!--待评价-->
+					<div class="daipingjia" @click="evaluate">
+						<span class="daipingjia_num">{{lists_length1}}</span>
+						<img class="tb" src="images/personalnotappraised.png"/>
+						<p class="describe">已评价</p>
+					</div>
+				</div>
+				<!--购物得积分-->
+				<div class="gwjf">
+					<p class="gw">购物得积分</p>
+					<p class="yxsh">仅限通过优选生活购买商品</p>
+				</div>
+				<!--添加订单 待赠送 已获赠 所有购物-->
+				<div class="gw_box">
+					<!--添加订单-->
+					<div class="tjdd">
+						<!--<span class="tjdd_num">2</span>-->
+						<img class="tb" src="images/personaladdorder.png"/>
+						<p class="describe">添加订单</p>
+					</div>
+					<!--待赠送-->
+					<div class="dzs">
+						<!--<span class="dzs_num">300</span>-->
+						<img class="tb" src="images/personalnotgive.png"/>
+						<p class="describe">待赠送</p>
+					</div>
+					<!--已获赠-->
+					<div class="yhz">
+						<!--<span class="yhz_num">2</span>-->
+						<img class="tb" src="images/personalgive.png"/>
+						<p class="describe">已获赠</p>
+					</div>
+					<!--所有购物-->
+					<div class="sygw">
+						<!--<span class="sygw_num">2</span>-->
+						<img class="tb" src="images/personalallorder.png"/>
+						<p class="describe">所有购物</p>
+					</div>
+				</div>
+			</div>
+			<!--兑换礼品 购物积分部分结束-->
+			<!--推广部分开始-->
+			<footer class="popularize" id="recommend">
+				<div class="popularize_box">
+					<div class="tuiguang" @click="promote">
+						<img class="tg_img" src="images/myerecommend.png"/>
+						<p class="wdtg">我的推广</p>
+						<p class="tgyl">推广新用户有礼</p>
+					</div>
+					<div class="hezuo" @click="cooperation">
+						<img class="tg_img" src="images/cooperation.png"/>
+						<p class="wdtg">商家合作</p>
+						<p class="tgyl">线下商家入驻</p>
+					</div>
+					<div class="tuichu" @click="usercenter">
+						<img class="tg_img" src="images/quitaccount.png"/>
+						<p class="wdtg">退出切换</p>
+						<p class="tgyl">退出或切换账号</p>
+					</div>
+				</div>
+				<div class="tanchuang" id="tan" v-html="tan">	</div>
+			</footer>
+			<!--推广部分结束-->
+			<!--轮播部分开始-->
+			<div class="luanbotu">
+				<div class="mui-scroll">
+                       <!--图片轮播-->
+                    <div class="mui-slider">
+                            <!--首尾加一张   mui-slider-loop -->
+                        <div class="mui-slider-group mui-slider-loop">
+                            <div class="mui-slider-item mui-slider-item-duplicate">
+                                <img src="images/advert-05.png" alt="">
+                            </div>
+                            <div class="mui-slider-item">
+                                <img src="images/advert-04.png" alt="">
+                            </div>
+                            <div class="mui-slider-item">
+                                <img src="images/advert-05.png" alt="">
+                            </div>
+                            <div class="mui-slider-item">
+                                <img src="images/advert-04.png" alt="">
+                            </div>
+                            <div class="mui-slider-item">
+                                <img src="images/advert-05.png" alt="">
+                            </div>
+                            <div class="mui-slider-item mui-slider-item-duplicate">
+   	                        	<img src="images/advert-04.png" alt="">
+                            </div>
+                        </div>
+                        <div class="mui-slider-indicator">
+                            <div class="mui-indicator mui-active"></div>
+                            <div class="mui-indicator"></div>
+                            <div class="mui-indicator"></div>
+                            <div class="mui-indicator"></div>
+                        </div>
+                    </div>
+                </div>
+			</div>
+		</div>
+	</body>
+	<!--<script src="js/jquery-3.3.1.js"></script>-->
+	<script src="js/mui.min.js"></script>
+	<script src="js/vue.min.js"></script>
+	<script src="js/swiper-4.3.3.min.js"></script>
+	<script src="js/axios.min.js"></script>
+	<script src="js/token.js"></script>
+	<script src="js/personal_center.js"></script>
+</html>

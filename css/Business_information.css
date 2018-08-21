@@ -1,0 +1,91 @@
+.information{
+	font-size: 0.333rem;
+	font-family: "微软雅黑";
+}
+.infor_box{
+	box-sizing: border-box;
+	height: 1.8rem;
+	border-bottom: 0.04rem solid #c5c5c5;
+}
+.infor_content{
+	display: flex;
+	justify-content: space-between;
+	padding:0.933rem 0.466rem;
+}
+.info2{
+	color: #9f9e9c;
+}
+.identity{
+    box-sizing: border-box;
+	height: 3.173rem;
+	border-bottom:0.04rem solid #c5c5c5;
+}
+.id_box{
+	display: flex;
+	padding:0.64rem 0.466rem;
+}
+.id_info{
+	margin-right: 0.866rem;
+}
+.id_pz{
+	margin-right: 0.52rem;
+}
+.infor_mobile{
+	box-sizing: border-box;
+	height: 1.666rem;
+	border-bottom: 0.04rem solid #C5C5C5;
+}
+.mobile_content{
+	line-height: 1.666rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 0.466rem;
+}
+.infor_logo{
+	box-sizing: border-box;
+	height: 2rem;
+	border-bottom: 0.04rem solid #C5C5C5;
+}
+.logo_ct{
+	margin-top: 0.333rem;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 0.466rem;
+}
+.logo_ct .logo_info{
+	margin-top: 0.133rem;
+}
+.infor_job{
+	height: 1.666rem;
+	border-bottom: 0.04rem solid #C5C5C5;
+}
+.job_content{
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 0.466rem;
+	line-height: 1.666rem;
+}
+.inf_1 .inf3{
+	margin-right: 0.506rem;
+}
+.infor_adress{
+	position: relative;
+	height: 2.133rem;
+	border-bottom: 0.04rem solid #C5C5C5;
+}
+.adr_content{
+	display: flex;
+	justify-content: space-between;
+	box-sizing: border-box;
+	padding: 0.533rem  0.466rem;
+}
+.adr_txt .txt_mid{
+	margin-right: 0.266rem;
+	margin-left: 0.266rem;
+}
+.txt_a{
+	position: absolute;
+	right: 1.2rem;
+}

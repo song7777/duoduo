@@ -1,0 +1,149 @@
+/*城市三级联动css开始*/
+.select{
+	width: 100%;
+    height: 0.58rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	border: 0;
+    font-size: 0.32rem;  
+}
+
+.win{
+	width: 100%;
+	height: 200px;
+	background-color: #f9f9f9;
+	overflow: hidden;
+	position: fixed;
+	bottom: -200px;
+	border-top:1px solid #b22023;
+	transition: transform 0.5s;
+	transform: translateY(0px);
+	z-index:9999;
+}
+.win .current{
+	width: 100%;
+	height: 40px;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	transform: none;
+	position: absolute;
+	top: 80px;
+}
+
+.win div{
+	width: 32%;
+	height: auto;
+	float: left;
+	transform: translateY(80px);
+}
+
+
+.win div span{
+	display: block;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	overflow: hidden;
+	text-align: center;
+}
+
+.win .city{
+	margin:0 2%;
+}
+
+.win .ok,.win .resut{
+	position: absolute;
+	width: 50px;
+	height: 30px;
+	background-color: #f33;
+	color: #fff;
+	text-align: center;
+	line-height: 30px;
+	border-radius: 6px;
+	top: -80px;
+	z-index:9998;
+}
+.win .resut{
+	background-color: #ddd;
+}
+.win .ok{
+	right: 0;
+}
+/*城市三级联动css结束*/
+
+
+.trunk{
+	flex: 1;
+	background: #FFFFFF;
+}
+.huisetiao{
+	width: 100%;
+	height: 0.08rem;
+	background:#dededc;
+}
+.region{
+	width: 100%;
+	height: 1.65rem;
+	background: #FFFFFF;
+	display: flex;
+	justify-content: space-between;
+	font-size: 0.29rem;
+	color: #5e5d5b;
+	border-bottom: 0.04rem solid #dededc;
+}
+.region_label{
+	margin-top: 0.86rem;
+	margin-left: 0.53rem;
+	font-size: 0.29rem;
+	color: #5e5d5b;
+}
+.Urban_linkage{
+	width: 6rem;
+	height: 0.58rem;
+	margin-top: 0.7rem;
+	margin-right: 0.44rem;
+	display: flex;
+}
+.region_choice{
+	width: 0.4rem;
+	height: 0.4rem;
+}
+.Detailed_address{
+	width: 100%;
+	height: 1.37rem;
+	background-color: #FFFFFF;
+	border-bottom: 0.04rem solid #dededc;
+	display: flex;
+	align-items: center;
+	font-size: 0.29rem;
+	color: #5e5d5b;
+}
+.label{
+	margin-left: 0.57rem;
+}
+.information{
+	width: 6.66rem;
+	margin-left: 0.42rem;
+	height: 0.46rem;
+	line-height: 0.46rem;
+	border: 0;
+	font-size: 0.29rem;
+	color: #5e5d5b;
+}
+//mui弹窗样式修改
+.mui-toast-container {
+    bottom: 50% !important;/*离布局底部的距离*/
+    }
+.mui-toast-message {
+	display: flex;
+    opacity: 0.7;/*toast中背景色的透明度*/
+    color: #FFFFFF; /*toast中字体颜色*/
+    width: 180px; /*toast宽度*/
+   	height:0.93rem ;
+    justify-content: center;
+    align-items: center;
+    font-size:0.32rem ;/*toast中文字的位置*/
+   margin-bottom: 1.5rem;
+}
+//mui弹窗样式修改结束

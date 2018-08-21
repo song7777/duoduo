@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我的礼品</title>
+		<link rel="stylesheet" href="css/public_style.css" />
+		<script type="text/javascript" src="js/flexible.js" ></script>
+		<link rel="stylesheet" href="css/my_gift_Completed.css" />
+	</head>
+	<body>
+		<!--已完成页面-->
+		<!--page包裹整个页面的div-->
+		  <div class="page" id="myCom">
+			<!--头部公共样式开始-->
+			<header class="head">
+				<div class="head_top">
+					<!--top_1头部左边第一个图标 可以换img属性改变图标形状  注意：如果不用图像保留div只删除img-->
+					<div class="top_1"><a class="top_a1"><img class="top_img1" src="images/goback-a.png" onclick="javascript:history.go(-1);"/></a></div>
+					<!--top_2头部文字，替换文字即可！-->
+					<div class="top_2">我的礼品</div>
+					<!--top_3头部右边第一个图标 可以换img属性改变图标形状 有文字替换文字，没有文字的删除文字即可  注意：如果不用图像保留div只删除img-->
+					<div class="top_3"><a class="top_a2" href="personal_center.html"><img class="top_img2" src="images/registcenter.png" /></a></div>
+				</div>
+			</header>
+			<!--头部公共样式结束-->
+			<!--主体内容开始-->
+			<section class="trunk">
+				<ul class="gift_ul">
+					<li class="gift_list">
+						<a href="my_gift_paid.html" class="gift_a"><p>待支付</p></a>
+					</li>
+					<li class="gift_list">
+						<a href="my_gift_received.html" class="gift_a"><p>待收货</p></a>
+					</li>
+					<li class="gift_list gift_list_red">
+						<a href="my_gift_Completed.html" class="gift_a gift_a_red"><p>已完成</p></a>
+					</li>
+					<li class="gift_list">
+						<a href="my_gift_evaluated.html" class="gift_a"><p>已评价</p></a>
+					</li>
+				</ul>
+				<div v-for="(lists,index) in lists_length" class="Commodity_details">
+					<div class="shop_top">
+						<div class="order_number"><label>订单号：</label>{{myCom.lists[index].order_sn}}</div>
+						<div class="shop_state">已完成</div>
+					</div>
+					<div  class="shop_body">
+						<div v-for="(lists,index2) in myCom.lists[index].goods_data.length" class="shop_num">
+							<p class="shop_t">
+								<img class="shop_img" :src="'http://ddpointmall.wiwipu.com'+myCom.lists[index].goods_data[index2].cover_img"/>
+							</p>
+							<div class="shop_details">
+								<p class="details_name">{{myCom.lists[index].goods_data[index2].goods_name}}</p>
+								<div class="details_introduce">
+									<div class="details_introduce1">
+										<p class="clock">
+											<img class="clock_img" src="images/clock-2.png">
+										</p>
+										<p class="shop_information">{{myCom.lists[index].goods_data[index2][0].spec_2}}&nbsp;&nbsp;&nbsp;&nbsp;{{myCom.lists[index].goods_data[index2][0].spec_3}}</p>
+									</div>
+									<div class="Arrow"><img class="Arrow_img" src="images/gonext.png" /></div>
+								</div>
+								<div class="coin">
+									<div class="Purchase_quantity">
+										<img  class="coin1" src="images/gold.png"/>
+										<p class="Price_number">{{myCom.lists[index].goods_data[index2].price}}</p>
+										<p class="shu">X{{myCom.lists[index].goods_data[index2].buy_num}}</p>
+									</div>
+									<div class="Price">
+										<img class="coin2" src="images/gold-b.png">
+										<p class="Price_number">{{myCom.lists[index].goods_data[index2].price*myCom.lists[index].goods_data[index2].buy_num}}</p>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+							<div class="sum">
+								<div class="Submission">
+														<p class="total_p">合计：{{myCom.lists[index].order_amount}}积分（另运费：{{myCom.lists[index].shipping_price}}元）</p>
+									<button v-bind:data-id="myCom.lists[index].order_id" @click="del" class="order_button1">删除订单</button>
+									<button v-bind:data-id="myCom.lists[index].goods_data[0].goods_id" v-bind:data-idd="myCom.lists[index].order_id"  @click="payment" class="order_button2">评价晒评</button>
+								</div>
+							</div>
+					</div>
+				</div>
+			</section>
+			<!--主体内容结束-->
+		</div>
+	</body>
+	<script type="text/javascript" src="js/token.js" ></script>
+	<script type="text/javascript" src="js/vue.min.js" ></script>
+	<script type="text/javascript" src="js/axios.min.js" ></script>
+	<script type="text/javascript" src="js/my_gift_Completed.js" ></script>
+</html>

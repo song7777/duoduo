@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>首页</title>
+		<link rel="stylesheet" href="css/public_style.css" />
+		<link rel="stylesheet" href="css/index_yx.css" />
+		<link rel="stylesheet" href="css/mui.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/login.css"/>
+        <link rel="stylesheet" type="text/css" href="css/swiper-4.3.3.min.css" />
+		<script type="text/javascript" src="js/flexible.js"></script>
+	</head>
+
+	<body>
+		<!--page包裹整个页面的div-->
+		<div class="page" style="overflow: hidden;width: 100%;"  id="index_yx">
+			<!--头部公共样式开始-->
+			<header class="head  head_color">
+				<div>
+				<div class="head_top">
+					<div class="logo flex_center">
+						<img  src="images/logo-02.png" class="logo_img" />
+					</div>
+					<div class="search">
+						<input type="text" placeholder="积分少换礼品 1:1" class="search_input"  onfocus='this.placeholder=""' onblur="this.placeholder='积分少换礼品 1:1'" onclick="window.location.href='Commodity_search.html'"/>
+					</div>
+					<div class="info">
+						<div class="classify flex_column">
+							<img  src="images/classify.png" alt="" class="classify_img"  onclick="window.location.href='index_yxfl.html'"/>分类
+						</div>
+						<div class="message flex_column">
+							<img  src="images/circular.png" alt="" class="circular" />
+							<img  src="images/message.png" class="message_img" onclick="window.location.href='message.html'" id="message" />消息
+						</div>
+					</div>
+				</div>
+				</div>
+			</header>
+			<!--头部公共样式结束-->
+			<!--商品分类-->
+			<section class="swiper-container4 shopfl" style="margin-top: 1.6rem;">
+				<div class="swiper-wrapper shop_list" id="product">
+					<div class="swiper-slide shop_listf" >
+						<ul class="shopfl_list1">
+							<li>
+								<img  src="images/t_logo.jpg" width="45px" height="45px" />
+								<span class="li_t">商品分类</span>
+							</li>
+							<li>
+								<img  src="images/t_logo.jpg" width="45px" height="45px" />
+								<span class="li_t">商品分类</span>
+							</li>
+							<li>
+								<img  src="images/t_logo.jpg" width="45px" height="45px" />
+								<span class="li_t">商品分类</span>
+							</li>
+							<li>
+								<img  src="images/t_logo.jpg" width="45px" height="45px" />
+								<span class="li_t">商品分类</span>
+							</li>
+							<li>
+								<img  src="images/t_logo.jpg" width="45px" height="45px" />
+								<span class="li_t">商品分类</span>
+							</li>
+						</ul>
+					</div>
+
+					<div class="swiper-slide shop_listf">
+						<ul class="shopfl_list1">
+							<li>
+								<img  src="images/t_logo.jpg" width="45px" height="45px" />
+								<span class="li_t">商品分类</span>
+							</li>
+							<li>
+								<img  src="images/t_logo.jpg" width="45px" height="45px" />
+								<span class="li_t">商品分类</span>
+							</li>
+							<li>
+								<img  src="images/t_logo.jpg" width="45px" height="45px" />
+								<span class="li_t">商品分类</span>
+							</li>
+							<li>
+								<img  src="images/t_logo.jpg" width="45px" height="45px" />
+								<span class="li_t">商品分类</span>
+							</li>
+							<li>
+								<img  src="images/t_logo.jpg" width="45px" height="45px" />
+								<span class="li_t">商品分类</span>
+							</li>
+						</ul>
+					</div>
+
+					<div class="swiper-slide shop_listf">
+						<ul class="shopfl_list1">
+							<li>
+								<img  src="images/t_logo.jpg" width="45px" height="45px" />
+								<span class="li_t">商品分类</span>
+							</li>
+							<li>
+								<img  src="images/t_logo.jpg" width="45px" height="45px" />
+								<span class="li_t">商品分类</span>
+							</li>
+							<li>
+								<img  src="images/t_logo.jpg" width="45px" height="45px" />
+								<span class="li_t">商品分类</span>
+							</li>
+							<li>
+								<img  src="images/t_logo.jpg" width="45px" height="45px" />
+								<span class="li_t">商品分类</span>
+							</li>
+							<li>
+								<img  src="images/t_logo.jpg" width="45px" height="45px" />
+								<span class="li_t">商品分类</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="swiper-pagination"> </div>
+			</section>
+			<!--美食专场-->
+			
+			<section>
+				<img  src="images/guanggao.jpg" height="118px" width="100%"  onclick="window,location.href='classification.html'"/>
+			</section>
+
+			<!--推荐-->
+			<section class="recommend">
+				<div class="swiper-container swiper-container3" id="recom">
+						<div class="swiper-wrapper">
+						    <div class="swiper-slide " v-for="(reco,index) in recom" :key="reco.index" @click="goods_click(reco)">
+						    	<img :src="'http://ddpointmall.wiwipu.com' + reco.cover_img" alt="" class="recommend_img"/>
+						    	<p class="recommend_title" v-text="reco.goods_name"></p>
+						    	<div class="money">
+						    		<img src="images/gold.png" class="gold"/>
+									<span class="price" v-text="reco.shop_price"></span>
+						    		
+						    	</div>
+						    </div>
+						    
+					  	</div>
+			  	
+					</div>	
+		   </section>
+		<!--推荐结束-->
+		<section>
+			<img  src="images/guanggao.jpg" height="118px" width="100%" onclick="window,location.href='classification.html'"/>
+		</section>
+		<!--返回顶部结束-->
+		<section class="recommend">
+			<div class="swiper-container swiper-container2" id="recomend">
+						<div class="swiper-wrapper">
+						    <div class="swiper-slide " v-for="(reco,index) in recom" :key="reco.index" @click="goods_click(reco)">
+						    	<img :src="'http://ddpointmall.wiwipu.com' + reco.cover_img" alt="" class="recommend_img"/>
+						    	<p class="recommend_title" v-text="reco.goods_name"></p>
+						    	<div class="money">
+									<img src="images/gold.png" class="gold"/>
+									<span class="price" v-text="reco.shop_price"></span>
+						    	</div>
+						    </div>
+						    
+					  	</div>
+			  	
+					</div>	
+		 </section>
+		    <div class="xl_bar flex_center"><p>下拉发现更多商品......</p></div>
+			<!--底部公共样式开始-->
+			<!--<footer class="footer">-->
+			<!--foot_1底部提交按钮替换文字即可-->
+			<div class="f_h">
+			<div class="footer_content" id="footer">
+                <div class="footer_flex " onclick="window.location.href='index.html'">
+					<img  src="images/shortcut-01b.png" alt="" class="img" />
+					<span> 好礼推荐</span>
+				</div>
+				<div class="footer_flex  num" onclick="window.location.href='selected_gift.html'">
+					<span class="buy_num"  >{{nums}}</span>
+					<img  src="images/shortcut-02b.png" alt="" class="img" />
+					<span> 已选礼品</span>
+				</div>
+				<div class="footer_flex "  onclick="window.location.href='index_yx.html'">
+					<img  src="images/shortcut-03a.png" alt="" class="img" />
+					<span style="color:#dd1474;"> 优选生活</span>
+				</div>
+				<div class="footer_flex " >
+					<img  src="images/shortcut-04b.png" alt="" class="img" />
+					<span> 个人中心</span>
+				</div>
+				<div class="tanchuang" id="tan" v-html="tan">	</div>
+			</div>
+            </div>
+			<div class="fixed">
+				<img  src="images/gotop.png" class="gotop"/>
+				<img  src="images/shoppinglist-1.png" class="shoppinglist" @click="shoplist" id="shoplist"/>
+			</div>
+			
+			<div class="tc flex_center">
+				<div class="tsk">
+				<img class="img_tc" src="images/advert-01.png" />
+				<div class="i_in flex_center"><input type="checkbox" class="b_input"/><label class="l_txt">不再提示</label></div>
+				</div>
+				<div class="cha  flex_center">×</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/token.js"></script>
+	<script src='js/mui.min.js'></script>
+	<script src="js/swiper-4.3.3.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/axios.min.js"></script>
+    <script src="js/index_yx.js"></script>
+    <script src="js/yx_vue.js"></script>
+    <script src="js/public.js"></script>
+</html>

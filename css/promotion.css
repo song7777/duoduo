@@ -1,0 +1,28 @@
+.trunk{
+	width: 100%;
+	flex: 1;
+	display: flex;
+}
+.QR_code{
+	width: 100%;
+	flex: 1;
+	background:url(../images/advert-06.png) no-repeat;
+	background-size: 100% 5.33rem;
+	background-position:0 60px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.erweima{
+	width: 6.46rem;
+	height: 6.46rem;
+	margin-top: 5.33rem;
+}
+.Preservation{
+	box-shadow: none;
+	border: 0;
+	background-color: white;
+	font-size: 0.26rem;
+	color: #ce7f3c;
+	margin-top: 1.73rem;
+}
