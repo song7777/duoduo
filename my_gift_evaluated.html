@@ -10,12 +10,12 @@
 	<body>
 		<!--已完成页面-->
 		<!--page包裹整个页面的div-->
-		 <div class="page" id="myEva">
+		 <div class="page" id="myEva" v-cloak>
 			<!--头部公共样式开始-->
 			<header class="head">
 				<div class="head_top">
 					<!--top_1头部左边第一个图标 可以换img属性改变图标形状  注意：如果不用图像保留div只删除img-->
-					<div class="top_1"><a class="top_a1"><img class="top_img1" src="images/goback-a.png" onclick="javascript:history.go(-1);"/></a></div>
+					<div class="top_1"><a class="top_a1"><img class="top_img1" src="images/goback-a.png" onclick="window.location.href='personal_center.html'"/></a></div>
 					<!--top_2头部文字，替换文字即可！-->
 					<div class="top_2">我的礼品</div>
 					<!--top_3头部右边第一个图标 可以换img属性改变图标形状 有文字替换文字，没有文字的删除文字即可  注意：如果不用图像保留div只删除img-->

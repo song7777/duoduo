@@ -22,7 +22,9 @@ var cLas = new Vue({
 				'Content-Type':'application/x-www-from-urlenconded'
 			}
 		}).then(function(response){
+			console.log(response)
 				console.log(response.data)
+				console.log(123456)
 				cLas.lists = response.data.cate_info;
 				cLas.lists_length = response.data.cate_info.length;
 				console.log(cLas.lists_length)
@@ -97,7 +99,14 @@ var cLas = new Vue({
 			}		
 		}
 		console.log(cLas.lists3)
-	}
+	},
+		ceshi:function(e){
+			console.log(e)
+			console.log(e.target.offsetParent.dataset.id)
+			var goods_classid = e.target.offsetParent.dataset.id;
+			console.log(goods_classid)
+			localStorage.setItem('goods_classid',JSON.stringify(goods_classid));
+		}
 	}
 })
 

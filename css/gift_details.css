@@ -10,10 +10,6 @@
 	width: 0.6rem;
 	height: 0.6rem;
 }
-.gd_display{
-	min-height: 100vh;
-	display: none;
-}
 .gd-goods-meun{
 	height: 100%;
 	display: flex;
@@ -95,7 +91,6 @@
 	font-size:0.29rem;
 }
 .gd-goods-parameter{
-	min-height: 100vh;
 	width: 100%;
 	display: block;
 }
@@ -308,6 +303,9 @@
 	border-top: 1px solid #C1C1C1;
 	z-index: 99;
 }
+[v-cloak] {
+    display: none !important;
+}
 .buy-space .flex_center{
 	flex: 1;
 	font-size: 0.33rem;
@@ -339,7 +337,6 @@
 }
 .gd-goods-details{
 	width: 100%;
-	min-height: 100vh;
 }
 .gd-goods-details-w{
 	width: 100%;

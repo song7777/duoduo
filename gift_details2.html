@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	    <title></title>
+	    <script type="text/javascript" src="js/flexible.js" ></script>
+	    <link rel="stylesheet" href="css/public_style.css" />
+	    <link rel="stylesheet" href="css/gift_details.css" />
+	</head>
+	<body>
+		<div class="page">
+			<header class="head">
+				<div class="head_top ">
+					<div class="top_1">
+						<a class="top_a1" onclick="window.location.href='index.html'"><img class="top_img1" src="images/goback-a.png" /></a>
+					</div>
+					<div class="top_2">
+						<ul class="gd-goods-meun">
+							<li class="gd-goods-cutover " onclick="location.href='gift_details.html'">商品</li>
+							<li class="gd-goods-cutover gd-goods-active">详情</li>
+							<li class="gd-goods-cutover" onclick="location.href='gift_details3.html'">评论</li>
+						</ul>
+					</div>
+					<div class="top_3"></div>
+				</div>
+			</header>
+			<section class="gd-goods-details" id="gd_details">
+				<div class="gd-goods-details-w" v-for="detail in details">
+					<img class="goods-de-img"  :src="'http://ddpointmall.wiwipu.com'+detail.img"/>
+				</div>
+			</section>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/vue.js" ></script>
+	<script type="text/javascript" src="js/axios.min.js" ></script>
+	<script type="text/javascript" src="js/swiper-4.3.3.min.js" ></script>
+	<script src="js/token.js" ></script>
+	<script type="text/javascript" src="js/details.js" ></script>
+</html>

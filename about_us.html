@@ -4,13 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title></title>
+    <link rel="stylesheet" href="css/mui.min.css" />
     <script type="text/javascript" src="js/flexible.js" ></script>
     <link rel="stylesheet" href="css/public_style.css" />
     <link rel="stylesheet" href="css/about_us.css" />
 </head>
 <body>
 
-		<div class="page backcolor1">
+		<div class="page backcolor1" id="about_us">
 			<header class="head">
 				<div class="head_top">
 					<div class="top_1">
@@ -34,11 +35,16 @@
 			</section>
 			<section class="au-opinion backcolor2">
 				<p class="au-opinion-title f_color3">意见反馈</p>
-				<textarea placeholder="请输入意见留言" class="au-opinion-con"></textarea>
+				<textarea placeholder="请输入意见留言" class="au-opinion-con" v-model="content"></textarea>
 			</section>
 			<footer class="foot">
-					<button class="foot_1">确认提交</button>
+					<button class="foot_1" @click="submit">确认提交</button>
 			</footer>
 		</div>
 </body>
+	<script src="js/mui.min.js" ></script>
+	<script src="js/vue.js"></script>
+	<script src="js/axios.min.js"></script>
+	<script src="js/token.js"></script>
+	<script src="js/about_us.js" ></script>
 </html>

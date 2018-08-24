@@ -171,7 +171,7 @@ var lists = new Vue({
 	data:{
 		lis:[],
 		page:1,
-		num:2,
+		num:4,
 		that:''
 	},
 	created:function(){
@@ -180,7 +180,7 @@ var lists = new Vue({
 			
 			{params:{
 				cate_id:0,
-				num:2,
+				num:4,
 				is_recommend:0,
 				page:1,
 			}},{
@@ -201,91 +201,7 @@ var lists = new Vue({
 						});	
 
 					})
-				lists.$nextTick(function(){
-//					var loading = document.getElementsByClassName('loading');
-//					
-////				console.log(loading.length)
-//					for(var i = 0 ; i<loading.length;i++){
-//						loading[i].index=i;
-//						loading[i].onclick=function(){
-//							lists.that = this.index;
-//							//console.log(that)
-//							lists.num =lists.num+2;
-//						     axios.get(
-//							'http://ddpointmall.wiwipu.com/index.php/api/goods/getgoodslist',
-//							{params:{
-//								cate_id:0,
-//								num:lists.num,
-//								is_recommend:0,
-//								page:1,
-//								
-//							}},{
-//								headers:{
-//										'Content-Type': 'application/x-www-form-urlencoded',
-//								},
-//							}).then(function(response){
-//									console.log(response)
-//								  	var data = response.data.data;
-//								  	console.log(data[lists.that])
-//									lists.lis = data[lists.that];
-//						   
-//							}).catch(function(response){
-//									console.log(response)
-//							});
-//						}
-//					}
-//					
-					/*$('.goodsList').each(function(){
-						
-						$(this).find('.goodsList_content ').each(function(){
-							
-							$(this).find('.loading').each(function(){
-								$(this).click(function(){
-									var oIndex = $(this).parent().parent().index()-1; 
-								console.log(oIndex)
-								lists.num =lists.num+2;
-									$.ajax({
-										type:'post',
-										url:'http://ddpointmall.wiwipu.com/index.php/api/goods/getgoodslist',
-										data:{
-											cate_id:0,
-											num:lists.num,
-											is_recommend:0,
-											page:1,
-										},
-										dataType:'json',
-										success:function(data){
-											snacks = data.data.零食;
-											jdGoods = data.data.京东商品;
-											light = data.data.灯;
-											fan = data.data.风扇;
-											books = data.data.书籍;
-											bag = data.data.书包;
-											phone = data.data.手机;
-											tbGoods = data.data.淘宝客商品;
-											for(i in lists.lis){
-												console.log(i)
-											}
-											var shangping = [snacks,jdGoods,light,fan,books,bag,phone,tbGoods]
-											console.log(shangping)
-											console.log(shangping[oIndex])
-											var oArr=[];
-											for(i in lists.lis){
-												oArr.push(i);
-											}
-											console.log(oArr[oIndex])
-											lists.lis[oIndex] = shangping[oIndex];
-//											lists.lis.oArr[oIndex] = shangping[oIndex];
-											lists.lis.书包 = shangping[oIndex];
-											console.log(lists.lis)
-											
-										}
-									})
-								})
-							})
-						})
-					})*/
-				})
+				
 			}).catch(function(response){
 						console.log(response)
 			});
@@ -333,7 +249,7 @@ var lists = new Vue({
 						'http://ddpointmall.wiwipu.com/index.php/api/goods/getgoodslist',
 						{params:{
 							cate_id:0,
-							num:lists.lis[index].length+2,
+							num:lists.lis[index].length+4,
 							is_recommend:0,
 							page:1,
 							
@@ -345,10 +261,11 @@ var lists = new Vue({
 //								console.log(response)
 							  	var data = response.data.data;
 								lists.lis[index] = data[index];
-								console.log(lists.lis[index])
+							
 					   
 						}).catch(function(response){
 								console.log(response)
+								
 						});
 		}
 			

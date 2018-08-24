@@ -123,8 +123,9 @@ var application = new Vue({
 					tc[0].innerHTML = "<div class='backgd'><div class='tcym'><p class='result'>修改成功</p><button class='Sure'>确定</button></div></div>";
 					var Sure = document.getElementsByClassName("Sure");
 					Sure[0].onclick = function(){
-						var backgd = document.getElementsByClassName("backgd");
-						backgd[0].parentNode.removeChild(backgd[0]);
+//						var backgd = document.getElementsByClassName("backgd");
+//						backgd[0].parentNode.removeChild(backgd[0]);
+						window.location.href='personal_center.html';
 					}
 				}
 			}).catch(function(response){

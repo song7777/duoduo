@@ -195,3 +195,19 @@
 	font-size: 0.29rem;
 	color: #ca2a50;
 }
+//mui弹窗样式修改
+.mui-toast-container {
+    bottom: 50% !important;/*离布局底部的距离*/
+    }
+.mui-toast-message {
+	display: flex;
+    opacity: 0.7;/*toast中背景色的透明度*/
+    color: #FFFFFF; /*toast中字体颜色*/
+    width: 180px; /*toast宽度*/
+   	height:0.93rem ;
+    justify-content: center;
+    align-items: center;
+    font-size:0.32rem ;/*toast中文字的位置*/
+   	margin-bottom: 1.5rem;
+}
+//mui弹窗样式修改结束

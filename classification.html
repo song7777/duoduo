@@ -12,7 +12,7 @@
 	</head>
 	<body>
 		<div id="toptop"></div>
-		<div class="page" id="cLas">
+		<div class="page" id="cLas" v-cloak>
 			<!--头部公共样式开始-->
 			<header class="head">
 				<div class="head_top">
@@ -58,11 +58,13 @@
 					<ul class="commodity_ul">
 						<li v-for="li3 in lists3[0]" class="commodity_li">
 							<a>
-							<div class="commodity_div" onclick="window.location.href='popup_commodity.html'" >
+								<div v-bind:data-id="li3.goods_id" class="commodity_div" @click="ceshi" onclick="window.location.href='popup_commodity.html'" >
 								<img class="commodity_img1" :src="'http://ddpointmall.wiwipu.com'+li3.cover_img" onerror="this.src='images/timg2.gif'"/>
 								<p class="commodity_p1">{{li3.goods_name}}</p>
-								<div class="Discount">0</div>
-								<p class="commodity_p2">￥123.00</p>
+								
+								<!--没有优惠券设置-->
+								<!--<div class="Discount">0</div>-->
+								<p class="commodity_p2">{{li3.shop_price}}</p>
 							</div>
 							</a>
 						</li>
@@ -83,7 +85,7 @@
 						<span> 好礼推荐</span>
 					</div>
 					<div  class="footer_flex " onclick="window.location.href='selected_gift.html'"> 
-						<span class="buy_num">6</span>
+						<span class="buy_num"  >{{nums}}</span>
 						<img src="images/shortcut-02b.png" alt=""  class="img"/>
 						<span> 已选礼品</span>
 					</div>

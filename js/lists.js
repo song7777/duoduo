@@ -15,7 +15,7 @@ var lists = new Vue({
 			
 			{params:{
 				cate_id:0,
-				num:2,
+				num:10,
 				is_recommend:0,
 				page:1,
 				
@@ -65,7 +65,7 @@ var lists = new Vue({
 			
 			{params:{
 				cate_id:0,
-				num:2,
+				num:4,
 				is_recommend:0,
 				page:1,
 			}},{
@@ -90,7 +90,7 @@ var lists = new Vue({
 			
 			{params:{
 				cate_id:0,
-				num:2,
+				num:4,
 				is_recommend:0,
 				page:1,
 			}},{
@@ -124,7 +124,7 @@ var loadMore = function(pullRefresh) {
 		'http://ddpointmall.wiwipu.com/index.php/api/goods/getgoodslist',
 		{params:{
 			cate_id:0,
-			num:2,
+			num:4,
 			is_recommend:0,
 			page:page,
 			
@@ -146,7 +146,7 @@ var loadMore = function(pullRefresh) {
 				    pullRefresh.endPullupToRefresh(false);
 						
 				}
-				for(var j = 0;j<2;j++){
+				for(var j = 0;j<4;j++){
 					lists.goods.push(data[num][j])
 				}
 				page = page+1;

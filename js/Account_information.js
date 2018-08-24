@@ -10,7 +10,7 @@ var account_inf = new Vue({
 	},
 	created:function(){
 		axios.get(
-			//'http://ddpointmall.wiwipu.com/index.php/api/goods/getgoodslist/access_token/1f9884d6266faf649a837ec38d8577c6/cate_id/3482/num/3/is_recommend/0/page/0',
+			
 			'http://ddpointmall.wiwipu.com/index.php/api/users/getaccountinfolist',
 
 			{params:{

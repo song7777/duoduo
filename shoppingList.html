@@ -46,7 +46,7 @@
 			<!--选项卡结束-->
 			<!--选项卡详情开始-->
 			<!--待赠积分-->
-				<div class="type hide " id="thridpage">
+				<div class="type hide " id="thridpage" v-cloak>
 				<section class="goodsIntegral"  v-for="(goods,index) in item" @click="singleSelect(goods, index)"   :name="goods.id">
 					<div class="goodsIntegral_content">
 						<div class="choice">
@@ -81,7 +81,7 @@
 			
 			<!--已赠积分-->
 		
-			<div class="type hide" id="secondPage">
+			<div class="type hide" id="secondPage" v-cloak>
 				<section class="goodsIntegral"  v-for="(goods,index) in item" @click="singleSelect(goods, index)"  :name="goods.id" >
 					<div class="goodsIntegral_content">
 						
@@ -116,7 +116,7 @@
 			<!--已赠积分结束-->
 			
 			<!--所有-->
-			<div class="type show " id="fristPage">
+			<div class="type show " id="fristPage" v-cloak>
 				<!--<section class="goodsIntegral" v-for="(goods,index) in item" :key="goods.index" @click="singleSelect(goods, index)">-->
 				<section class="goodsIntegral" v-for="(goods,index) in item" :key="goods.index" @click="singleSelect(goods, index)" :name="goods.id">
 					<div class="goodsIntegral_content">

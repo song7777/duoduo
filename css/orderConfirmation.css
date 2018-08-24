@@ -1,3 +1,4 @@
+
 .head{
 	border-bottom:0.08rem solid #dededc;
 }
@@ -11,9 +12,12 @@
 	box-sizing: border-box;
 	display: flex;
 	justify-content: space-between;
-	font: 0.306666rem/0.8rem "微软雅黑";
+	font:0.333333rem/0.8rem "微软雅黑";
 	border-top: 0.08rem solid #C0C0C0;
 	
+}
+.mobile{
+	margin-right: 0.373333rem;
 }
 .address_info{
 	height: 100%;
@@ -57,7 +61,7 @@
 	margin-right: 0.346666rem;
 }
 .goods_title{
-	font: 0.306666rem/0.466666rem "微软雅黑";
+	font: 0.333333rem/0.466666rem "微软雅黑";
 	color: #5f5e5c;
 	margin-bottom: 0.906666rem;
 }

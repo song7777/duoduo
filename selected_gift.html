@@ -5,6 +5,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 		<title></title>
+		<link rel="stylesheet" href="css/mui.min.css" />
 		<script type="text/javascript" src="js/flexible.js"></script>
 		<link rel="stylesheet" href="css/public_style.css" />
 		<link rel="stylesheet" href="css/swiper.min.css" />
@@ -25,7 +26,7 @@
 					<div class="top_3"></div>
 				</div>
 			</header>
-			<section class="gift">
+			<section class="gift" v-cloak>
 				<div class="gift_content">
 					<img src="images/shoppingcart-empty.png" alt="" class="img" />
 					<p class="notAdd">您还未添礼品</p>
@@ -37,7 +38,7 @@
 					<input type="checkbox" class="sg-select" v-bind:data-id="num.id" @click="singleSelect" />
 					<div class="sg-goods-info">
 						<img class="sg-goods-img" :src="'http://ddpointmall.wiwipu.com'+num.goods.cover_img" />
-						<div class="info-space">
+						<div class="info-space" v-cloak>
 							<p class="sg-goods-name">{{num.goods.goods_name}}</p>
 							<p class="sg-goods-property">
 								<span>颜色：{{num.spec_2}}</span>
@@ -63,7 +64,7 @@
 						<input id="sg-selectAll" class="sg-selectAll" @click="allSelect" type="checkbox" />全选
 						<img class="sg-delete" src="images/delete.png" @click="sDelete" />删除
 					</div>
-					<div class="nowBuy-amount">
+					<div class="nowBuy-amount" v-cloak>
 						<p>选择{{sNumber}}件</p>
 						<p>合计：<span class="na-money">{{amount}}</span></p>
 					</div>
@@ -72,10 +73,9 @@
 			</footer>
 		</div>
 	</body>
-	<script src="js/mui.min.js" ></script>
+	<script src="js/mui.min.js"></script>
 	<script src="js/vue.js"></script>
 	<script src="js/axios.min.js"></script>
 	<script src="js/token.js"></script>
 	<script src="js/select_gift.js"></script>
-
 </html>

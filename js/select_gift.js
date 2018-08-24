@@ -88,7 +88,6 @@ var gift_car = new Vue({
 			})
 		}).catch(function(response) {
 			console.log(response);
-			
 		});
 	},
 	methods:{
@@ -160,6 +159,7 @@ var gift_car = new Vue({
 					this.giftNum[i].buy_num++;
 					if (this.giftNum[i].buy_num > this.giftNum[i].stock) {
 						this.giftNum[i].buy_num = this.giftNum[i].stock;
+						mui.toast("库存不足")
 					}
 			amount();
 				}
@@ -209,7 +209,7 @@ var gift_car = new Vue({
 			console.log(response);	
 			var order_id = response.data.order_id;
 				console.log(order_id)
-			localStorage.setItem('orderid',JSON.stringify(order_id));
+			localStorage.setItem('order_id',JSON.stringify(order_id));
 			if(response.data.error_code == 1 || response.data.error_code == 2){
 				
 			}else{

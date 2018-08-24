@@ -1,15 +1,16 @@
 var about_us = new Vue({
-	el:"#user_feedback",
+	el:"#about_us",
 	data:{
 		content:"",
 	},
 	methods:{
 		submit:function(){
+		var self = this;
 			axios.get(
 			"http://ddpointmall.wiwipu.com/index.php/api/users/feedback", {
 				params: {
-				    access_token:"1f9884d6266faf649a837ec38d8577c6",
-					content:this.content
+				    access_token:token,
+					content:self.content
 				}
 			}, {
 				headers: {
@@ -17,7 +18,8 @@ var about_us = new Vue({
 				}
 			}).then(function(response) {
 			console.log(response)
-				
+				mui.toast("提交成功")
+				console.log(1213)
 		    }).catch(function(response) {
 			    console.log(response);
 		    });

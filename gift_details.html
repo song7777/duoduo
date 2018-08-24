@@ -19,15 +19,15 @@
 			<header class="head gd-header2">
 				<div class="head_top gd-header-bor">
 					<div class="top_1">
-						<a class="top_a1" onclick="javascript:history.go(-1);">
+						<a class="top_a1" onclick="window.location.href='index.html'">
 							<img class="top_img1 gd_back" src="images/goback-b.png" />
 						</a>
 					</div>
 					<div class="top_2">
 						<ul class="gd-goods-meun gd-goods-meun2">
 							<li class="gd-goods-cutover gd-goods-active">商品</li>
-							<li class="gd-goods-cutover" >详情</li>
-							<li class="gd-goods-cutover" >评论</li>
+							<li class="gd-goods-cutover" onclick="location.href='gift_details2.html'">详情</li>
+							<li class="gd-goods-cutover" onclick="location.href='gift_details3.html'">评论</li>
 						</ul>
 					</div>
 					<div class="top_3"></div>
@@ -42,7 +42,7 @@
 			        </ul>
 			        <div class="swiper-pagination"></div>
 			   </div>
-			   <div class="gd-goods-info">
+			   <div class="gd-goods-info" v-cloak>
 			   	    <p class="gd-goods-name f_color3">
 			   	    	{{goods_name}}
 			   	    </p>
@@ -69,13 +69,16 @@
 			   </div>
 			   <div class="tanchuang" id="tan" v-html="tan"></div>
 			</section>
-			<section class="gd-goods-parameter gd_display" id="goodsParameter">
+			<section class="gd-goods-parameter" id="goodsParameter">
+				<div>
+					
+				</div>
 				<div class="gd-goods-guige gd-goods-space">
 					<span class="parameter-name f_color2">商品规格：</span>
 				</div>
 				<div class="gd-goods-color gd-goods-space">
 					<span class="parameter-name f_color2">商品颜色：</span>
-					<div class="parameter-select">
+					<div class="parameter-select" v-cloak>
 						<div class="pa-se-option pa-se-option1 flex_center f_color3" v-for="(option,index) in options" @click="testclick">
 							 {{goodsAttr[index].name}}
 						</div>
@@ -83,7 +86,7 @@
 				</div>
 				<div class="gd-goods-size gd-goods-space">
 					<span class="parameter-name f_color2">商品尺寸：</span>		
-					<div class="parameter-select">
+					<div class="parameter-select" v-cloak>
 						<div class="pa-se-option pa-se-option2 flex_center f_color3" v-for="val in goodsAttr2" @click="sizeClick">
 							{{val.name}}
 						</div>
@@ -141,7 +144,7 @@
 
 				<ul class="gd-goods-related swiper-wrapper">
 					<li class="rg-goods swiper-slide" v-for="recommend in recommends">
-						<div class="rg-goods-n"  >
+						<div class="rg-goods-n"  v-cloak>
 								<img class="gd-goods-img" :src="'http://ddpointmall.wiwipu.com'+recommend.cover_img" />
 						<p class="rg-goods-name f_color3">{{recommend.goods_name}}</p>
 						<p class="rg-goods-price flex_center f_color1">
@@ -154,42 +157,9 @@
 				</ul>
 				</div>
 			</section>
-			<section class="gd-goods-details gd_display" id="gd_details">
-				<div class="gd-goods-details-w" v-for="detail in details">
-					<img class="goods-de-img"  :src="'http://ddpointmall.wiwipu.com'+detail.img"/>
-				</div>
-			</section>
-			<div id="goodsComment" class="gd_display">
-				<div class="noComment flex_center"></div>
-				<section class="gd-goods-comment " v-for="comment in comments">
-				<div class="gd-goods-user">
-					<img class="gd-user-img" :src="'http://ddpointmall.wiwipu.com'+comment.face"/>
-					<div class="com-user">
-						<span class="gd-user-name">{{comment.nickname}}</span>
-						<time class="gd-com-time f_color2">{{comment.create_time | convTime}}</time>
-					</div>
-				</div>
-				<div class="com-content">
-					<p class="com-text ">{{comment.contents}}</p>
-					<div class="com-img-space">
-						<div v-for="img in comment.comment_pic">
-							<img :src="'http://ddpointmall.wiwipu.com/'+img" class="com-img"/>
-						</div>
-						<div class="clear_float"></div>
-					</div>
-				</div>
-				<div class="shangjia-huifu">
-					<div class="sjhf-space">
-					<p class="sj-name">商家回复</p>
-					<p class="sj-hf">{{comment.reply}}
-					</p>
-					</div>
-				</div>
-			</section>
-			</div>
 			<footer class="gd-goods-buy" id="goodsBuy">
 				<div class="buy-space">
-					<div class="gd-goods-tuijian flex_center">
+					<div class="gd-goods-tuijian flex_center" onclick="location.href='index.html'">
 						<div class="add-border flex_center">
 						<img class="gdgb-icon" src="images/gd1.png" />
 						好礼推荐
@@ -215,9 +185,9 @@
 	<script src="js/vue.min.js" ></script>
 	<script src="js/axios.min.js" ></script>
 	<script src="js/swiper-4.3.3.min.js" ></script>
-	<script src="js/details.js" ></script>
+	<!--<script src="js/details.js" ></script>-->
 	<script src="js/mui.min.js" ></script>
-	<script src="js/goods_comment.js" ></script>
+	<!--<script src="js/goods_comment.js" ></script>-->
 	<script src="js/gift_details.js" ></script>
 
 </html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	    <title></title>
+	    <script type="text/javascript" src="js/flexible.js" ></script>
+	    <link rel="stylesheet" href="css/public_style.css" />
+	    <link rel="stylesheet" href="css/gift_details.css" />
+	</head>
+	<body>
+		<div class="page">
+			<header class="head">
+				<div class="head_top ">
+					<div class="top_1">
+						<a class="top_a1" onclick="window.location.href='index.html'"><img class="top_img1" src="images/goback-a.png" /></a>
+					</div>
+					<div class="top_2">
+						<ul class="gd-goods-meun">
+							<li class="gd-goods-cutover " onclick="location.href='gift_details.html'">商品</li>
+							<li class="gd-goods-cutover " onclick="location.href='gift_details2.html'">详情</li>
+							<li class="gd-goods-cutover gd-goods-active">评论</li>
+						</ul>
+					</div>
+					<div class="top_3"></div>
+				</div>
+			</header>
+			<div id="goodsComment">
+				<div class="noComment flex_center"></div>
+				<section class="gd-goods-comment " v-for="comment in comments">
+				<div class="gd-goods-user">
+					<img class="gd-user-img" :src="'http://ddpointmall.wiwipu.com'+comment.face"/>
+					<div class="com-user" v-cloak>
+						<span class="gd-user-name">{{comment.nickname}}</span>
+						<time class="gd-com-time f_color2">{{comment.create_time | convTime}}</time>
+					</div>
+				</div>
+				<div class="com-content">
+					<p class="com-text " v-cloak>{{comment.contents}}</p>
+					<div class="com-img-space">
+						<div v-for="img in comment.comment_pic">
+							<img :src="'http://ddpointmall.wiwipu.com/'+img" class="com-img"/>
+						</div>
+						<div class="clear_float"></div>
+					</div>
+				</div>
+				<div class="shangjia-huifu" v-cloak>
+					<div class="sjhf-space">
+					<p class="sj-name">商家回复</p>
+					<p class="sj-hf">{{comment.reply}}
+					</p>
+					</div>
+				</div>
+			</section>
+			</div>
+		</div>
+	</body>
+	<script src="js/token.js" ></script>
+	<script type="text/javascript" src="js/vue.js" ></script>
+	<script type="text/javascript" src="js/axios.min.js" ></script>
+	<script type="text/javascript" src="js/goods_comment.js" ></script>
+</html>

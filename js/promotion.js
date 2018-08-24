@@ -10,7 +10,7 @@ var QRcode = new Vue({
 				'http://ddpointmall.wiwipu.com/index.php/api/users/scerweima',
 				{
 					params:{
-						data:'www.baidu.com'
+						data:'http://ddpointmall.wiwipu.com/duoduo/registration.html?__hbt=1534919394828'
 					}},{
 						headers:{
 							'Content-Type': 'application/x-www-form-urlencoded'

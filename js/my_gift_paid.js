@@ -45,6 +45,12 @@
 			}).then(function(response){
 				console.log(123123)
 				console.log(response);
+				if(response.data.error_code == 0){
+					mui.toast("支付成功");
+				}else{
+					mui.toast("支付失败");
+				}
+				
 			}).catch(function(response){
 				console.log(response);
 			});

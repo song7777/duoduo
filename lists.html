@@ -42,7 +42,7 @@
 							<div class="swiper-container swiper-container3">
 								<div class="swiper-wrapper ">
 								    <div class="swiper-slide flex_center"  v-for="(list,index) in lis"  @click="look_click(index)" >
-										<p class="lists_title" >{{index}}</p>
+										<p class="lists_title" v-text="index"></p>
 								    </div>
 								     
 								 </div>   
@@ -53,7 +53,7 @@
 
 	
 				<!--分类详情-->
-			<!--	<section class="goodsList mui-scroll-wrapper" id="scroll"  >
+				<section class="goodsList mui-scroll-wrapper"  id="scroll" v-cloak>
 					<div class="goodsList_content mui-scroll"  >
 						<div class="recommend_title" >
 							<span class="line"></span>
@@ -63,35 +63,11 @@
 						<div class="goods_details flex_center mui-table-view mui-table-view-chevron" >
 							<div class="goods_detail " v-for="(li,i) in goods"  @click="goods_click(li)" >
 									<img :src="'http://ddpointmall.wiwipu.com' + li.cover_img"  alt="" class="detail_img"/>
-									<p class="detail_title">{{li.goods_name}}</p>
+									<p class="detail_title" >{{li.goods_name}}</p>
 									<div class="detail_buy "> 
 										<div class="flex_center">
 											<img src="images/gold.png" alt="" class="detail_buy_img" />
-											<span>{{li.shop_price}}</span>
-										</div>
-										
-									</div>
-							</div>
-						</div>
-						
-						
-					</div>
-				</section>-->
-				<section class="goodsList mui-scroll-wrapper"  id="scroll" >
-					<div class="goodsList_content mui-scroll"  >
-						<div class="recommend_title" >
-							<span class="line"></span>
-	   						<span class="txt" >{{goodsName}}</span>
-	   						<span class="line"></span>
-						</div>
-						<div class="goods_details flex_center mui-table-view mui-table-view-chevron" >
-							<div class="goods_detail " v-for="(li,i) in goods"  @click="goods_click(li)" >
-									<img :src="'http://ddpointmall.wiwipu.com' + li.cover_img"  alt="" class="detail_img"/>
-									<p class="detail_title">{{li.goods_name}}</p>
-									<div class="detail_buy "> 
-										<div class="flex_center">
-											<img src="images/gold.png" alt="" class="detail_buy_img" />
-											<span>{{li.shop_price}}</span>
+											<span >{{li.shop_price}}</span>
 										</div>
 										
 									</div>
@@ -113,7 +89,7 @@
 			<!--</div>-->
 			<!--返回顶部结束-->
 			<!--底部公共样式开始-->
-			<footer class="footer" id="footer">
+			<footer class="footer" id="footer" v-cloak>
 				<!--foot_1底部提交按钮替换文字即可-->
 				<div class="footer_content">
 					<div class="footer_flex "  onclick="window.location.href='index.html'">

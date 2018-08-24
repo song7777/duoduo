@@ -45,6 +45,11 @@
 			}).then(function(response){
 				console.log(123123)
 				console.log(response);
+				if(response.data.error_code == 0){
+					mui.toast("确认收货成功");
+				}else{
+					mui.toast("确认收货失败");
+				}
 			}).catch(function(response){
 				console.log(response);
 			});

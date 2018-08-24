@@ -36,7 +36,7 @@
 			</header>
 			<!--头部公共样式结束-->  
 			<!--顶部轮播-->
-			<div class="swiper-container swiper-container1" id="banner">
+			<div class="swiper-container swiper-container1" id="banner" >
 			  	<div class="swiper-wrapper">
 				    <div class="swiper-slide slide1" v-for="(banner,index) in item" :key="index"  >
 				    	<a href="#">
@@ -49,7 +49,7 @@
 			</div>	
 			<!--顶部轮播结束-->
 			<!--活动区域-->
-			<section class="notice " id="notice">
+			<section class="notice " id="notice" v-cloak>
 				<div class="notice_content ">
 					<div class="prompt " >
 						<ul class="prompt_content " :class="{marquee_top:animate}">
@@ -87,7 +87,7 @@
 			</section>
 			<!--活动区域结束-->
 			<!--推荐-->
-			<section class="recommend" id="recommend">
+			<section class="recommend" id="recommend" v-cloak>
 				<div class="recommend_content">
 					<div class="recommend_title">
 						<span class="line"></span>
@@ -115,15 +115,14 @@
 			
 			<!--推荐结束-->
 			<!--分类列表-->
-			<div  id="lists">
+			<div  id="lists" v-cloak>
 				<section class="lists">
 					<div class="lists_content">
 							<div class="swiper-container swiper-container3">
 								<div class="swiper-wrapper ">
 								    <div class="swiper-slide flex_center"  v-for="(list,index) in lis"  >
-								 	<a :href="'#'+index"><p class="lists_title" >{{index}}</p></a>	
+								 	<a :href="'#'+index"><p class="lists_title" v-text="index"></p></a>	
 								    </div>
-								     
 								 </div>   
 					 		</div>	
 					 		
@@ -131,12 +130,14 @@
 				</section>
 
 				<!--分类详情-->
-				<section class="goodsList" v-for="(list,index) in lis" :key="index" >
-					<a href="javacript:void(0)" :name="index"></a>
+				<section class="goodsList" v-for="(list,index) in lis" :key="index"  >
+					<a href="javacript:void(0)" :name="index"  class="target">
+						<span class="place"></span>
+					</a>
 					<div class="goodsList_content ">
 						<div class="recommend_title">
 							<span class="line"></span>
-	   						<span class="txt" >{{index}}</span>
+	   						<span class="txt" v-text="index"></span>
 	   						<span class="line"></span>
 							<a class="more flex_center" href="lists.html" @click="go_lists(index)">更多...</a>
 						</div>
@@ -144,11 +145,11 @@
 						<div class="goods_details flex_center"  >
 							<div class="goods_detail " v-for="li in list"  @click="goods_click(li)" >
 									<img :src="'http://ddpointmall.wiwipu.com' + li.cover_img"  alt="" class="detail_img"/>
-									<p class="detail_title">{{li.goods_name}}</p>
+									<p class="detail_title"  >{{li.goods_name}}</p>
 									<div class="detail_buy "> 
 										<div class="flex_center">
 											<img src="images/gold.png" alt="" class="detail_buy_img" />
-											<span>{{li.shop_price}}</span>
+											<span  >{{li.shop_price}}</span>
 										</div>
 <!--										<img src="images/shoppingcart.png" alt="" class="shoppingcart_img"/>-->
 								</div>
@@ -170,7 +171,7 @@
 			<!--</div>-->
 			<!--返回顶部结束-->
 			<!--底部公共样式开始-->
-			<footer class="footer" id="footer">
+			<footer class="footer" id="footer" v-cloak>
 				<!--foot_1底部提交按钮替换文字即可-->
 				<div class="footer_content">
 					<div class="footer_flex ">
@@ -178,7 +179,7 @@
 						<span> 好礼推荐</span>
 					</div>
 					<div  class="footer_flex "  onclick="window.location.href='selected_gift.html'" > 
-						<span class="buy_num"  >{{nums}}</span>
+						<span class="buy_num"   >{{nums}}</span>
 						<img src="images/shortcut-02b.png" alt=""  class="img"/>
 						<span> 已选礼品</span>
 					</div>

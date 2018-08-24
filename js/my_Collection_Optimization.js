@@ -36,7 +36,7 @@ var myCollection2 = new Vue({
 								'http://ddpointmall.wiwipu.com/index.php/api/users/delcollection',
 								{
 									params:{
-										access_token:"1f9884d6266faf649a837ec38d8577c6",
+										access_token:token,
 										collect_id:collect_id,
 									}},{
 										headers:{

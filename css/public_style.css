@@ -257,3 +257,8 @@
 	z-index: 999;
 }
 
+[v-cloak]{
+
+     display: none !important;
+
+}

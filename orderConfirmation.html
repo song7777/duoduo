@@ -30,14 +30,14 @@
 			</header>
 			<!--头部公共样式结束-->
 			<!--地址修改-->
-			<section class="address" id="address" >
+			<section class="address" id="address"  >
 				<div class="address_content" >
 					<div class="address_info">
 						<span>收货信息:</span>
 						<ul class="info">
-							<li>{{items.area}}</li>
-							<li>{{items.detail_address}}</li>
-							<li>{{items.mobile}} <span>{{items.consignee}}</span></li>
+							<li v-text="items.area"></li>
+							<li v-text="items.detail_address"></li>
+							<li><span class="mobile" v-text="items.mobile"></span><span v-text="items.consignee"></span></li>
 						</ul>
 					</div>
 					<span class="address_edit" onclick="window.location.href='Receiving_address.html'">修改收货地址</span>
@@ -48,7 +48,7 @@
 			</section>
 			<!--地址修改结束-->
 			<!--商品详情-->
-			<div id="goods">
+			<div id="goods" v-cloak>
 				<section class="goods">
 					<div class="goods_content">
 						<div class="goods_list" v-for="(good,index) in lists" :key='good.index'>
@@ -56,16 +56,16 @@
 								<img :src="'http://ddpointmall.wiwipu.com' + list[index].cover_img" alt="" class="goods_img" />
 								<ul>
 
-									<li class="goods_title">{{list[index].goods_name}}</li>
-									<li class="goods_type">{{list[index].spec_2}}<span class="goods_size">{{list[index].spec_3}}</span></li>
-									<li><img src="images/gold.png" alt="" class="gold" /><span class="goods_price price">{{list[index].price}}</span><span class="goods_count">x{{list[index].num}}</span></li>
+									<li class="goods_title" v-text="list[index].goods_name"></li>
+									<li class="goods_type"><span v-text="list[index].spec_2"></span><span class="goods_size" v-text="list[index].spec_3"></span></li>
+									<li><img src="images/gold.png" alt="" class="gold" /><span class="goods_price price" v-text="list[index].price"></span><span class="goods_count" >x{{list[index].num}}</span></li>
 								</ul>
 							</div>
 							<div class="goods_return">
 								<img src="images/gonext.png" alt="" class="gonext" />
 								<div>
 									<img src="images/gold.png" alt="" class="gold" />
-									<span class="price">{{list[index].price*list[index].num}}</span>
+									<span class="price" >{{list[index].price*list[index].num}}</span>
 								</div>
 							</div>
 						</div>
@@ -80,11 +80,11 @@
 						<div>
 							<span class="goods_prices">商品金额:</span>
 							<img src="images/gold.png" alt="" class="gold" />
-							<span class="price">{{list.amount}}</span>
+							<span class="price" >{{list.amount}}</span>
 						</div>
 						<div>
 							<span class="expressage">积分换礼需额外支付快递费用:</span>
-							<span class="price">￥{{list.price}}</span>
+							<span class="price"  >￥{{list.price}}</span>
 						</div>
 					</div>
 				</section>
