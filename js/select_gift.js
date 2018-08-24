@@ -209,7 +209,7 @@ var gift_car = new Vue({
 			console.log(response);	
 			var order_id = response.data.order_id;
 				console.log(order_id)
-			localStorage.setItem('order_id',JSON.stringify(order_id));
+			localStorage.setItem('orderid',JSON.stringify(order_id));
 			if(response.data.error_code == 1 || response.data.error_code == 2){
 				
 			}else{
