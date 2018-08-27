@@ -13,16 +13,15 @@
 		
 	</head>
 	<body>
-		<div class="page" id="search">
+		<div class="page" id="search" v-cloak>
 			<header class="head">
 				<div class="head_top">
 					<div class="top_1"  onclick="javascript:history.go(-1);"><a class="top_a1"><img class="top_img1"  src="images/goback-a.png" /></a></div>
 					<div class="top_2 search">
-						<div class="search_img"><img  src="images/Magnifier.png" width="25px" height="25px"/></div>
+						<div class="search_img"><img  src="images/Magnifier.png"  class="i_log"/></div>
 						<input class="search_sr" v-model="search_sr"  type="text" value="" placeholder="积分少换礼品1:1" onfocus="this.placeholder=''" onblur="this.placeholder='积分少换礼品1:1'"/>
 					    <div class="txt_menu">
 					    	<span class="t_a" @click="type_click">礼品</span>
-					    	|
 					    	<span class="t_b" @click="type_click">商品</span>
 					    </div>
 					</div>
@@ -75,7 +74,7 @@
 				<div class="pro_price flex_center">
 					<img src="images/gold.png" /><label class="price_num">{{items.shop_price}}</label>
 				</div>
-				<img src="images/shoppingcart.png" height="35px" width="35px" style="margin-right: 0.333rem;" />
+				<img src="images/shoppingcart.png"  style="margin-right: 0.333rem;" width="45px" height="45px"/>
 			</div>
 		</div>
 

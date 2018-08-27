@@ -1,3 +1,29 @@
+var mySwiper = new Swiper('.swiper-container4', {
+	autoplay: false, //可选选项，自动滑动
+	loop: true,
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: true,
+		observer: true,//修改swiper自己或子元素时，自动初始化swiper
+		observeParents: true//修改swiper的父元素时，自动初始化swiper
+	},
+})
+
+var mySwiper = new Swiper('.swiper-container1', {
+	autoplay: true, //等同于以下设置
+	autoplay: {
+		delay: 2000,
+		stopOnLastSlide: false,
+		disableOnInteraction: true,
+	},
+	loop: true,
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: true,
+
+	},
+
+});
 //消息图标
 var message = new Vue({
 	el:"#message",
@@ -205,6 +231,8 @@ var banner = new Vue({
 						delay: 3000,
 						stopOnLastSlide: false,
 						disableOnInteraction: false, //滑动之后是否继续自动滑动
+						observer: true,//修改swiper自己或子元素时，自动初始化swiper
+						observeParents: true//修改swiper的父元素时，自动初始化swiper
 					},
 					loop: true,
 					pagination: {
@@ -312,6 +340,8 @@ var recom = new Vue({
 					      		spaceBetween: 0,
 					     		 freeMode: true,
 								  clickable: true,
+								observer: true,//修改swiper自己或子元素时，自动初始化swiper
+								 observeParents: true//修改swiper的父元素时，自动初始化swiper
 						});
 					})
 						
@@ -339,11 +369,9 @@ var recom = new Vue({
 			}).then(function(response){
 					console.log(response)
 					var data = response.data.data;
-					lists.lis = data;
 					console.log(reco.goods_id)
 					localStorage.setItem('goods_id',JSON.stringify(reco.goods_id));
-					
-			
+					window.location.href="gift_details.html"
 			}).catch(function(response){
 						console.log(response)
 			});
@@ -379,6 +407,8 @@ var recommend = new Vue({
 					      		spaceBetween: 0,
 					     		 freeMode: true,
 								  clickable: true,
+								  observer: true,//修改swiper自己或子元素时，自动初始化swiper
+								  observeParents: true//修改swiper的父元素时，自动初始化swiper
 						});
 					})
 						
@@ -404,10 +434,9 @@ var recommend = new Vue({
 			}).then(function(response){
 					console.log(response)
 					var data = response.data.data;
-					lists.lis = data;
 					console.log(reco.goods_id)
 					localStorage.setItem('goods_id',JSON.stringify(reco.goods_id));
-					
+					window.location.href="gift_details.html"
 			
 			}).catch(function(response){
 						console.log(response)

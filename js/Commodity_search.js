@@ -176,7 +176,7 @@ var search = new Vue({
 				console.log(error_code)
 			}).catch(function(response) {});
 		},
-		type_click: function() {
+		type_click() {
 			if(this.type == 0) {
 				this.type = 1;
 				console.log(this.type)
@@ -185,8 +185,7 @@ var search = new Vue({
 				console.log(this.type)
 			}
 		},
-		gc_click: function() {
-
+		gc_click() {
 			console.log('up')
    			var a = this.tmp_data;
 			var tmp = '';

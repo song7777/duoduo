@@ -1,39 +1,3 @@
-var mySwiper = new Swiper('.swiper-container4', {
-			autoplay: false, //可选选项，自动滑动
-			loop: true,
-			pagination: {
-				el: '.swiper-pagination',
-				clickable: true,
-			},
-		})
-
-		var mySwiper = new Swiper('.swiper-container1', {
-			autoplay: true, //等同于以下设置
-			autoplay: {
-				delay: 2000,
-				stopOnLastSlide: false,
-				disableOnInteraction: true,
-			},
-			loop: true,
-			pagination: {
-				el: '.swiper-pagination',
-				clickable: true,
-
-			},
-
-		});
-		var mySwiper2 = new Swiper('.swiper-container2', {
-			slidesPerView: 'auto',
-			spaceBetween: 0,
-			freeMode: true,
-			clickable: true,
-		});
-		var mySwiper3 = new Swiper('.swiper-container3', {
-			slidesPerView: 'auto',
-			spaceBetween: 0,
-			freeMode: true,
-			clickable: true,
-		});
 window.onload = function(){
    	var gotop = document.getElementsByClassName("gotop")[0]//获取图片所在div位置；
    	var contentHeight = document.documentElement.contentHeight;

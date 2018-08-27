@@ -1,3 +1,10 @@
+[v-cloak]{
+	display: none;
+}
+.i_log{
+	height: 40px;
+	width: 40px;
+}
 .search{
 	position: relative;
 	border: 0.013rem solid #dd1474;
@@ -7,6 +14,10 @@
 	height: 0.666rem;
 	display: flex;
 	overflow: hidden;
+}
+.search_nav img{
+	   height: 15px;
+	   width: 35px;
 }
 .search_img{
 	margin-left: 0.2rem;
@@ -32,9 +43,13 @@
 	color: #cd4664;
 	margin-right: 0.133rem;
 }
+.t_a::after{
+	margin-left: 20px;
+	content: '';
+	border: 1px solid #cccccc;
+}
 .t_b{
 	color: #8a8685;
-	margin-left: 0.133rem;
 	}
 .num{
 	position: relative;
@@ -98,6 +113,10 @@
 	display: flex;
 	
 }
+.pro_price img{
+	height: 75px;
+	width: 75px;
+}
 .nav_pro{
 	
 	display: flex;
@@ -113,7 +132,7 @@
 	margin-top:0.466rem;
 }
 .pro_p{
-	font-size: 25px;
+	font-size: 40px;
 	margin-bottom: 0.266rem;
 }
 .img_p{
@@ -136,7 +155,7 @@
 	color: #c82c51;
 }
 .sale_num{
-	font-size: 25px;
+	font-size: 30px;
 }
 .mui-toast-container {
     bottom: 50% !important;/*离布局底部的距离*/
