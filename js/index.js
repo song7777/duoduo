@@ -7,24 +7,40 @@ var mySwiper2 = new Swiper('.swiper-container2', {
 	});
 
 
-
 window.onload = function(){
 	 var gotop = document.getElementsByClassName("gotop")[0]; //获取图片所在的div
 	 var clientHeight = document.documentElement.clientHeight;
 	 var head = document.getElementsByClassName("head")[0]; 
+	 var oLists  = document.getElementsByClassName("lists")[0];//获取到导航栏class
+	 
 	 var timer = null;
 	 var oTop = true;
 	 window.onscroll = function(){
 	 	 //获取滚动条的滚动高度
 	 	var allTop = document.documentElement.scrollTop || document.body.scrollTop;
+
+	 	//头部
 	 	if(allTop >= 100){//当距离顶部超过100px时，显示头部
 			head.className = "head head_color";
-	 		 
 	 	}else {  //距离顶部小于100px，头部透明
 			head.className = "head ";
 			
 		}
+	 	//商品分类
+	 	 if(allTop >= 480){  //当滚动距离大于480px时执行下面的东西
 	 	
+	 	
+	 	 		   oLists.style.position = 'fixed';
+                    oLists.style.top = '1.773333rem';
+                    oLists.style.zIndex = '100';
+                    oLists.style.backgroundColor = '#fff';
+	 	 	
+                 
+                }else{
+                	 oLists.style.position = 'static';
+                }
+                  
+	 	//返回顶部按钮
 	 	if(allTop >= 300){
 	 		 gotop.style.display = "block";
 	 	}else { //距离顶部小于300px，隐藏返回
@@ -65,4 +81,7 @@ window.onload = function(){
 			}
 			})
 	}
+	
+
+
 }

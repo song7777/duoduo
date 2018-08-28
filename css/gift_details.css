@@ -101,6 +101,7 @@
 	align-items: center;
 	box-sizing: border-box;
 	padding: 0 0.33rem;
+	font-size: 0.32rem;
 }
 .parameter-name{
 	min-width: 1.6rem;
@@ -186,6 +187,7 @@
 	justify-content: space-around;
 }
 .remaining-time{
+	font-size: 0.32rem;
 	display: flex;
 	color: #f8c301;
 }
@@ -205,6 +207,7 @@
 	height: 0.58rem;
 	border: 0;
 	border-radius: 0.1rem;
+	font-size: 0.32rem;
 	background:linear-gradient(to bottom,#fff,#DEDEDC);
 }
 .related-goods{
@@ -218,6 +221,7 @@
 	width: 100%;
 	position: relative;
 	text-align: center;
+	font-size: 0.32rem;
 }
 .rg-text:before{
 	width:2.93rem;
